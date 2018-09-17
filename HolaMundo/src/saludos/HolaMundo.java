@@ -6,7 +6,7 @@ public class HolaMundo {
 
 	public void saludar() {
 		
-		Utilidades.write("Hola Mundo");
+		Utilidades.write("Hola Amigos");
 	}
 
 }
