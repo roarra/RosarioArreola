@@ -1,5 +1,7 @@
 package control;
 
+import java.util.List;
+
 import beans.Actor;
 import datos.DAO;
 import utilidades.Utilidades;
@@ -20,6 +22,13 @@ public class Prueba {
 		Actor alan = gestionBBDD.consultarActor("Tom Hiddleston");
 		
 		Utilidades.write(alan.toString());
+		
+		List <Actor>lista = gestionBBDD.listaActores();
+		
+		for(Actor elemento: lista) {
+			
+			Utilidades.write(elemento.toString());
+		}
 		
 //		gestionBBDD.insertarActor(a1);
 //		gestionBBDD.insertarActor(a2);

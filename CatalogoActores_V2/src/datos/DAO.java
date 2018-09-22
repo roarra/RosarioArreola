@@ -24,6 +24,30 @@ public class DAO {
 	}
 	
 	
+	//Mostar actores
+	public ArrayList<Actor> listaActores() {
+		ArrayList listaActores = new ArrayList<Actor>();
+        Statement st = null;
+        ResultSet rs = null;
+        
+        try {
+            ConexionDB con = new ConexionDB();
+            st = con.getConnection().createStatement();
+            rs = st.executeQuery("SELECT NOMBRE,NACIONALIDAD FROM actores;" );
+            while (rs.next()) {   	
+            	Actor actor  = new Actor();
+            	actor.setNombre(rs.getString("NOMBRE"));
+    			actor.setNacionalidad(rs.getString("NACIONALIDAD"));
+                listaActores.add(actor);
+            }
+            con.getConnection().close();
+        } catch (SQLException ex) {
+            Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return listaActores;
+	}
+	
+	
 	
 	//Consultar actores por nombre
 	
@@ -37,10 +61,7 @@ public class DAO {
 			ConexionDB conexion = new ConexionDB();
 			st = conexion.getConnection().createStatement();
 
-
-			String query = "SELECT NOMBRE, NACIONALIDAD FROM actores WHERE NOMBRE= '" + nombre + "';";
-			
-			rs = st.executeQuery(query);
+			rs = st.executeQuery("SELECT NOMBRE,NACIONALIDAD FROM actores WHERE NOMBRE= '" + nombre + "';");
 			
 			actor.setNombre(rs.getString("NOMBRE"));
 			actor.setNacionalidad(rs.getString("NACIONALIDAD"));
