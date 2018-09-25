@@ -6,9 +6,13 @@ public class Main {
 		
 		
 		
-		new Prueba().pruebasDos();
+		//new Prueba().pruebasDos();
 		
-		new Prueba().pruebasUno();
+		//new Prueba().pruebasUno();
+		
+		new Prueba().pruebasTres();
+		
+		new Prueba().pruebasCuatro();
 		
 
 	}

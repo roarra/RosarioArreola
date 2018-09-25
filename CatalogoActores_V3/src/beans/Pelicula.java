@@ -8,17 +8,29 @@ public class Pelicula {
 	private String director;
 	private boolean vista;
 	private Date fechaEstreno;
+	private int idActores;
 	
 	public Pelicula() {
 		super();
 	}
 
-	public Pelicula(String titulo, String director, boolean vista, Date fechaEstreno) {
+	public Pelicula(String titulo, String director, boolean vista, Date fechaEstreno, int idActores) {
 		super();
 		this.titulo = titulo;
 		this.director = director;
 		this.vista = vista;
 		this.fechaEstreno = fechaEstreno;
+		this.idActores = idActores;
+	}
+	
+	
+
+	public int getIdActores() {
+		return idActores;
+	}
+
+	public void setIdActores(int idActores) {
+		this.idActores = idActores;
 	}
 
 	public String getTitulo() {
