@@ -26,7 +26,7 @@ public class DAOPeliculas extends Pelicula {
 		try {
 			ConexionDB con = new ConexionDB();
 			st = con.getConnection().createStatement();
-			rs = st.executeQuery("SELECT DISTINCT TITULO,DIRECTOR,VISTA,FECHA_ESTRENO,ID_ACTORES FROM peliculas;");
+			rs = st.executeQuery("SELECT DISTINCT TITULO,DIRECTOR,VISTA,FECHA_ESTRENO,ID_ACTORES, IMG FROM peliculas;");
 			while (rs.next()) {
 				Pelicula pelicula = new Pelicula();
 				pelicula.setTitulo(rs.getString("TITULO"));
@@ -34,6 +34,7 @@ public class DAOPeliculas extends Pelicula {
 				pelicula.setVista(rs.getBoolean("VISTA"));
 				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO"));
 				pelicula.setIdActores(rs.getInt("ID_ACTORES"));
+				pelicula.setImg(rs.getString("IMG"));
 				listaPeliculas.add(pelicula);
 			}
 			con.getConnection().close();

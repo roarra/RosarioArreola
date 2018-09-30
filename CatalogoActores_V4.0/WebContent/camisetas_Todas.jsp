@@ -297,8 +297,8 @@
 										<!-- Product Description -->
 										<div class="product-description">
 											<%-- <span>${mi.categoria}</span> --%>
-											<p class="product-price">Titulo ${mi.titulo}  -  ${mi.director} €</p>
-												<h6><a href="ServletListado?operacion=1&id=${mi.idActores}" class="btn essence-btn">VER PRODUCTO</a></h6>
+											<p class="product-price">Titulo ${mi.titulo}  -  ${mi.director}</p>
+												<h6><a href="ServletListado?operacion=1&id=${mi.idActores}" class="btn essence-btn">FICHA TÉCNICA</a></h6>
 											<!-- Hover Content -->
 											<div class="hover-content">
 												<!-- Add to Cart -->
