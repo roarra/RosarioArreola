@@ -282,8 +282,7 @@
 										<div class="product-img">
 											<%-- <img src="${mi.url}" alt=""> --%>
 											<!-- Hover Thumb -->
-<!-- 											<img class="hover-img" src="img/product-img/product-2.jpg"
-												alt=""> -->
+											<img class="hover-img" src="${mi.img}" alt="">
 <!-- 											Product Badge
 											<div class="product-badge offer-badge">
 												<span>-30%</span>
