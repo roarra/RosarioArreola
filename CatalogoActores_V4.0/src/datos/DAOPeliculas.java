@@ -97,19 +97,19 @@ public class DAOPeliculas extends Pelicula {
 
 	// Buscar películas por nombre
 
-	public List<Pelicula> buscarPelicula(String titulo) {
+	public ArrayList<Pelicula> buscarPelicula(String titulo) {
 
 		Statement st = null;
 		ResultSet rs = null;
 
-		List<Pelicula> listaPeliculas = new ArrayList<>();
+		ArrayList<Pelicula> listaPeliculas = new ArrayList<>();
 		try {
 
 			ConexionDB conexion = new ConexionDB();
 			st = conexion.getConnection().createStatement();
 
 			rs = st.executeQuery(
-					"SELECT TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, ID_ACTORES FROM peliculas WHERE TITULO= '" + titulo
+					"SELECT TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, IMG, SINOPSIS FROM peliculas WHERE TITULO= '" + titulo
 							+ "';");
 			while (rs.next()) {
 				Pelicula pelicula = new Pelicula();
@@ -117,7 +117,8 @@ public class DAOPeliculas extends Pelicula {
 				pelicula.setDirector(rs.getString("DIRECTOR"));
 				pelicula.setVista(rs.getBoolean("VISTA"));
 				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO"));
-				pelicula.setIdActores(rs.getInt("ID_ACTORES"));
+				pelicula.setImg(rs.getString("IMG"));
+				pelicula.setSinopsis(rs.getString("SINOPSIS"));
 				listaPeliculas.add(pelicula);
 			}
 

@@ -48,19 +48,20 @@
 					<!-- Nav Start -->
 					<div class="classynav">
 						<ul>
-							<li><a href="#">Categoria</a>
+							<li><a href="#">CINE</a>
 								<div class="megamenu">
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletListado?operacion=3&genero=HOMBRE">HOMBRE</a></li>
-										<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=MANGA_CORTA">Manga corta</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=TIRANTES">Tirantes</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=MANGA_LARGA">Manga larga</a></li>
+										<li class="title"><a href="ServletListado?operacion=actores">Actores</a></li>
+										
+										
 									</ul>
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletListado?operacion=3&genero=MUJER">MUJER</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=MUJER&categoria=MANGA_CORTA">Manga corta</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=MUJER&categoria=TIRANTES">Tirantes</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=MUJER&categoria=MANGA_LARGA">Manga larga</a></li>
+										<li class="title"><a href="ServletListado?operacion=peliculas">Peliculas</a></li>
+                                    	
+									</ul>
+									<ul class="single-mega cn-col-4">
+										<li class="title"><a href="ServletListado?operacion=directores">Directores</a></li>
+									
 									</ul>
 									<div class="single-mega cn-col-4">
 										<img src="img/camisetas/patopeque.jpg" alt="">

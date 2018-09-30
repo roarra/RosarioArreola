@@ -52,19 +52,20 @@
 					<!-- Nav Start -->
 					<div class="classynav">
 						<ul>
-							<li><a href="#">Categoria</a>
+							<li><a href="#">CINE</a>
 								<div class="megamenu">
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletListado?operacion=3&genero=HOMBRE">HOMBRE</a></li>
-										<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=MANGA_CORTA">Manga corta</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=TIRANTES">Tirantes</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=MANGA_LARGA">Manga larga</a></li>
+										<li class="title"><a href="ServletPeliculas?operacion=actores">Actores</a></li>
+										
+										
 									</ul>
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletListado?operacion=3&genero=MUJER">MUJER</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=MUJER&categoria=MANGA_CORTA">Manga corta</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=MUJER&categoria=TIRANTES">Tirantes</a></li>
-                                    	<li><a href="ServletListado?operacion=4&genero=MUJER&categoria=MANGA_LARGA">Manga larga</a></li>
+										<li class="title"><a href="ServletPeliculas?operacion=peliculas">Peliculas</a></li>
+                                    	
+									</ul>
+									<ul class="single-mega cn-col-4">
+										<li class="title"><a href="ServletPeliculas?operacion=directores">Directores</a></li>
+									
 									</ul>
 									<div class="single-mega cn-col-4">
 										<img src="img/camisetas/patopeque.jpg" alt="">
@@ -280,9 +281,10 @@
 									<div class="single-product-wrapper">
 										<!-- Product Image -->
 										<div class="product-img">
-											<%-- <img src="${mi.url}" alt=""> --%>
+											<img src="${mi.img}" alt="">
 											<!-- Hover Thumb -->
-											<img class="hover-img" src="${mi.img}" alt="">
+<!-- 											<img class="hover-img" src="img/product-img/product-2.jpg"
+												alt=""> -->
 <!-- 											Product Badge
 											<div class="product-badge offer-badge">
 												<span>-30%</span>
@@ -297,7 +299,7 @@
 										<div class="product-description">
 											<%-- <span>${mi.categoria}</span> --%>
 											<p class="product-price">Titulo ${mi.titulo}  -  ${mi.director}</p>
-												<h6><a href="ServletListado?operacion=1&id=${mi.idActores}" class="btn essence-btn">FICHA TÉCNICA</a></h6>
+												<h6><a href="ServletPeliculas?operacion=consulta&titulo=${mi.titulo}" class="btn essence-btn">FICHA TÉCNICA</a></h6>
 											<!-- Hover Content -->
 											<div class="hover-content">
 												<!-- Add to Cart -->

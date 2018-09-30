@@ -15,18 +15,18 @@ public class Prueba {
 
 	public void pruebasUno() {
 
-		DAO gestionBBDD = new DAO();
+		DAOPeliculas gestionBBDD = new DAOPeliculas();
 
-		List<Actor> alan = gestionBBDD.consultarActor("Alan Rickman");
+//		List<Actor> alan = gestionBBDD.consultarActor("Alan Rickman");
+//
+//		for (Actor elemento : alan) {
+//
+//			Utilidades.write(elemento.toString());
+//		}
 
-		for (Actor elemento : alan) {
+		List<Pelicula> lista = gestionBBDD.listaPeliculas();
 
-			Utilidades.write(elemento.toString());
-		}
-
-		List<Actor> lista = gestionBBDD.listaActores();
-
-		for (Actor elemento : lista) {
+		for (Pelicula elemento : lista) {
 
 			Utilidades.write(elemento.toString());
 		}

@@ -11,6 +11,7 @@ public class Pelicula {
 	private Date fechaEstreno;
 	private int idActores;
 	private String img;
+	private String sinopsis;
 	
 	public Pelicula() {
 		super();
@@ -28,6 +29,14 @@ public class Pelicula {
 	}
 	
 	
+
+	public String getSinopsis() {
+		return sinopsis;
+	}
+
+	public void setSinopsis(String sinopsis) {
+		this.sinopsis = sinopsis;
+	}
 
 	public int getId() {
 		return id;
@@ -88,7 +97,7 @@ public class Pelicula {
 	@Override
 	public String toString() {
 		return "Pelicula [titulo=" + titulo + ", director=" + director + ", vista=" + vista + ", fechaEstreno="
-				+ fechaEstreno + "]";
+				+ fechaEstreno + img +"]";
 	}
 	
 	
