@@ -97,7 +97,7 @@
 				
 				<!-- User Login Info -->
 				<div class="user-login-info">
-					<a href="login.jsp"><img src="img/core-img/user.svg" alt=""></a>
+					<a href="formularioPeliculas.jsp">Admin</a>
 				</div>
 				<!-- Cart Area -->
 				<!--<div class="cart-area">

@@ -16,7 +16,7 @@ import beans.Pelicula;
 
 public class DAOPeliculas extends Pelicula {
 
-	// Mostrar películas
+	// Mostrar pelï¿½culas
 
 	public ArrayList<Pelicula> listaPeliculas() {
 		ArrayList listaPeliculas = new ArrayList<Pelicula>();
@@ -44,7 +44,7 @@ public class DAOPeliculas extends Pelicula {
 		return listaPeliculas;
 	}
 
-	// Añadir películas
+	// Aï¿½adir pelï¿½culas
 
 	public void insertarPeliculas(Pelicula pelicula) {
 
@@ -55,9 +55,9 @@ public class DAOPeliculas extends Pelicula {
 			ConexionDB conexion = new ConexionDB();
 			st = conexion.getConnection().createStatement();
 
-			String query = "INSERT INTO peliculas(TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, ID_ACTORES) VALUES ('"
+			String query = "INSERT INTO peliculas(TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, ID_ACTORES, IMG, SINOPSIS) VALUES ('"
 					+ pelicula.getTitulo() + "','" + pelicula.getDirector() + "'," + pelicula.isVista() + ","
-					+ pelicula.getFechaEstreno() + "," + pelicula.getIdActores() + ");";
+					+ /*pelicula.getFechaEstreno()*/null + "," + pelicula.getIdActores() + ",'" + pelicula.getImg() + "','" + pelicula.getSinopsis() + "');";
 
 			st.executeUpdate(query);
 
@@ -70,7 +70,7 @@ public class DAOPeliculas extends Pelicula {
 		}
 	}
 
-	// Eliminar películas
+	// Eliminar pelï¿½culas
 
 	public void eliminarPelicula(String titulo) {
 
@@ -95,7 +95,7 @@ public class DAOPeliculas extends Pelicula {
 
 	}
 
-	// Buscar películas por nombre
+	// Buscar pelï¿½culas por nombre
 
 	public ArrayList<Pelicula> buscarPelicula(String titulo) {
 
@@ -132,7 +132,7 @@ public class DAOPeliculas extends Pelicula {
 		return listaPeliculas;
 	}
 
-	// Actualizar películas
+	// Actualizar pelï¿½culas
 
 	public void modificarPelicula(String nbusqueda, String titulo, String director, boolean vista, Date fechaEstreno,
 			int idActores) {
