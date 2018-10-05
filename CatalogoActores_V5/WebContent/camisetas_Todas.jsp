@@ -96,7 +96,7 @@
 				-->
 				<!-- User Login Info -->
 				<div class="user-login-info">
-					<a href="login.jsp"><img src="img/core-img/user.svg" alt=""></a>
+					<a href="login.jsp"><img src="img/pollo.png" alt=""></a>
 				</div>
 				<!-- Cart Area -->
 				<!--<div class="cart-area">
