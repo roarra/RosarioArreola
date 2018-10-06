@@ -205,8 +205,7 @@
 										</div> -->
 										<div class="col col-md-7 col-xl-8">
 											<div class="custom-file custom-file-sm">
-												<input type="file" name="img"
-													data-max-file-size="1048576"
+												<input type="file" name="img" data-max-file-size="1048576"
 													data-file-error-1="El archivo que has añadido supera el límite máximo de 1 MB. Por favor, selecciona otro archivo."
 													id="cardScanFile" class="form-control custom-file-input"><label
 													for="cardScanFile" data-initial-value="Elegir archivo"
@@ -226,124 +225,142 @@
 								</div>
 							</form>
 
-							<form action="ServletFormularioPelicula?operacion=modificar" method="POST">
 								<div class="row">
 									<label><a href="#"
-										onclick="changeModificarCamisetaDiv();"><h6>Modificar
-												Pelicula</h6></a></label>
+										onclick="changeModificarCamisetaDiv();"><h6>MODIFICAR PELICULA</h6></a></label>
 									<div id="desplegableModificar" class="noMostrar">
+							<form action="ServletFormularioPelicula?operacion=modificar" method="POST">
 										<div class="col-md-12 mb-3">
 											<label for="apellidos">Titulo</label> <input type="text"
 												class="form-control" value="" name="titulo">
-										</div>
-										<div class="col-12 mb-3">
-											<label for="Direccion">Director</label> <input type="text"
-												class="form-control mb-3" value="" name="director">
-
-										</div>
-										<div class="col-12 mb-3">
-											<label for="codigoPostal">Vista</label> <input type="text"
-												class="form-control" value="" name="vista">
-										</div>
-										<!--<div class="col-12 mb-3">
-                                    <label for="ciudad">Fecha Estreno</label>
-                                    <input type="text" class="form-control"  value="" name="fecha">
-                                </div> -->
-										<div class="col-12 mb-3">
-											<label for="codigoPostal">ID Actores</label> <input
-												type="text" class="form-control" value="" name="idactores">
-										</div>
-										<!-- <div class="col-12 mb-3">
-											<label for="provincia">IMG</label> <input type="text"
-												class="form-control" value="" name="img">
-										</div> -->
-										<div class="col col-md-7 col-xl-8">
-											<div class="custom-file custom-file-sm">
-												<input type="file" name="img"
-													data-max-file-size="1048576"
-													data-file-error-1="El archivo que has añadido supera el límite máximo de 1 MB. Por favor, selecciona otro archivo."
-													id="cardScanFile" class="form-control custom-file-input"><label
-													for="cardScanFile" data-initial-value="Elegir archivo"
-													class="custom-file-label text-truncate custom-file-label-sm mb-0"
-													data-toggle="tooltip" data-placement="bottom"
-													style="max-width: 225px;"
-													data-original-title="Elegir archivo">Elegir IMAGEN</label>
-											</div>
-										</div>
-										<div class="col-12 mb-3">
-											<label for="numero">Sinopsis</label> <input type="text"
-												class="form-control" value="" name="sinopsis"> <br>
+											<br>
 											<button class="btn essence-btn">MODIFICAR</button>
 											<br>
 										</div>
-									</div>
-								</div>
 							</form>
-
-							<form action="ServletFormularioPelicula?operacion=baja" method="POST">
-								<div class="row">
-									<label><a href="#"
-										onclick="changeEliminarCamisetaDiv();"><h6>Eliminar
-												Pelicula</h6></a></label>
-									<div id="desplegableEliminar" class="noMostrar">
-										<div class="col-md-12 mb-3">
-											<label for="nombre">TITULO</label> <input type="text"
-												class="form-control" value="" name="titulo"> <br>
-											<button class="btn essence-btn">ELIMINAR</button>
-										</div>
-									</div>
-								</div>
-							</form>
-
-							<form action="ServletFormularioPelicula?operacion=consulta" method="POST">
-								<div class="row">
-									<label><a href="#"
-										onclick="changeConsultarCamisetaDiv();"><h6>Consultar
-												Pelicula</h6></a></label>
-									<div id="desplegableConsultar" class="noMostrar">
-										<div class="col-md-12 mb-3">
-											<label for="nombre">TITULO</label> <input type="text"
-												class="form-control" value="" name="titulo"> <br>
-											<button class="btn essence-btn">Consultar</button>
-										</div>
-									</div>
-									
-							</div>
-							</form>
-
-
-							<!-- Espacio para la consulta de camisetas -->
+							<!-- EMPIEZA EL FOREACH DEL MODIFICAR -->
 							<c:forEach var="mi" items="${Pelicula}">
-
-								<div class="single_product_desc clearfix">
-
-									<div>
-										<p>
-											<span><b>TITULO: </b>${mi.titulo}</span>
-										<p>
-											<span><b>DIRECTOR: </b> ${mi.director}</span>
-										<p>
-											<span><b>VISTA: </b> ${mi.vista}</span>
-										<p>
-											<span><b>FECHA ESTRENO: </b> ${mi.fechaEstreno}</span>
-										<p>
-											<span><b>SINOPSIS: </b> ${mi.sinopsis}</span>
-										
+							<form action="ServletFormularioPelicula?operacion=modificar"
+								method="POST">
+								
+									<div class="col-md-12 mb-3">
+										<label for="apellidos">Titulo</label> <input type="text"
+											class="form-control" value="" name="titulo">
 									</div>
-								</div>
-							</c:forEach>
+									<div class="col-12 mb-3">
+										<label for="Direccion">Director</label> <input type="text"
+											class="form-control mb-3" value="" name="director">
 
+									</div>
+									<div class="col-12 mb-3">
+										<label for="codigoPostal">Vista</label> <input type="text"
+											class="form-control" value="" name="vista">
+									</div>
+									<!--<div class="col-12 mb-3">
+                                    <label for="ciudad">Fecha Estreno</label>
+                                    <input type="text" class="form-control"  value="" name="fecha">
+                                </div> -->
+									<div class="col-12 mb-3">
+										<label for="codigoPostal">ID Actores</label> <input
+											type="text" class="form-control" value="" name="idactores">
+									</div>
+									<!-- <div class="col-12 mb-3">
+											<label for="provincia">IMG</label> <input type="text"
+												class="form-control" value="" name="img">
+										</div> -->
+									<div class="col col-md-7 col-xl-8">
+										<div class="custom-file custom-file-sm">
+											<input type="file" name="img" data-max-file-size="1048576"
+												data-file-error-1="El archivo que has añadido supera el límite máximo de 1 MB. Por favor, selecciona otro archivo."
+												id="cardScanFile" class="form-control custom-file-input"><label
+												for="cardScanFile" data-initial-value="Elegir archivo"
+												class="custom-file-label text-truncate custom-file-label-sm mb-0"
+												data-toggle="tooltip" data-placement="bottom"
+												style="max-width: 225px;"
+												data-original-title="Elegir archivo">Elegir IMAGEN</label>
+										</div>
+									</div>
+									<div class="col-12 mb-3">
+										<label for="numero">Sinopsis</label> <input type="text"
+											class="form-control" value="" name="sinopsis"> <br>
+										<button class="btn essence-btn">MODIFICAR</button>
+										<br>
+									</div>
+								
+							</form>
+							</c:forEach>
 						</div>
 					</div>
+
+
+					<form action="ServletFormularioPelicula?operacion=baja"
+						method="POST">
+						<div class="row">
+							<label><a href="#" onclick="changeEliminarCamisetaDiv();"><h6>Eliminar
+										Pelicula</h6></a></label>
+							<div id="desplegableEliminar" class="noMostrar">
+								<div class="col-md-12 mb-3">
+									<label for="nombre">TITULO</label> <input type="text"
+										class="form-control" value="" name="titulo"> <br>
+									<button class="btn essence-btn">ELIMINAR</button>
+								</div>
+							</div>
+						</div>
+					</form>
+
+					<form action="ServletFormularioPelicula?operacion=consulta"
+						method="POST">
+						<div class="row">
+							<label><a href="#"
+								onclick="changeConsultarCamisetaDiv();"><h6>Consultar
+										Pelicula</h6></a></label>
+							<div id="desplegableConsultar" class="noMostrar">
+								<div class="col-md-12 mb-3">
+									<label for="nombre">TITULO</label> <input type="text"
+										class="form-control" value="" name="titulo"> <br>
+									<button class="btn essence-btn">Consultar</button>
+								</div>
+							</div>
+
+						</div>
+					</form>
+
+
+					<!-- Espacio para la consulta de camisetas -->
+					<c:forEach var="mi" items="${Pelicula}">
+
+						<div class="single_product_desc clearfix">
+
+							<div>
+								<p>
+									<span><b>TITULO: </b>${mi.titulo}</span>
+								<p>
+									<span><b>DIRECTOR: </b> ${mi.director}</span>
+								<p>
+									<span><b>VISTA: </b> ${mi.vista}</span>
+								<p>
+									<span><b>FECHA ESTRENO: </b> ${mi.fechaEstreno}</span>
+								<p>
+									<span><b>SINOPSIS: </b> ${mi.sinopsis}</span>
+							</div>
+						</div>
+					</c:forEach>
+
 				</div>
 			</div>
 		</div>
-		<br> <br> <br> <br> <br>
+	</div>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	</div>
 
 
 
-    
+
 
 	<footer class="footer_area clearfix">
 		<div class="container">
