@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <!-- ##### Header Area Start ##### -->
+     <!-- ##### Header Area Start ##### -->
     <header class="header_area">
 		<div
 			class="classy-nav-container breakpoint-off d-flex align-items-center justify-content-between">
@@ -51,16 +51,16 @@
 							<li><a href="#">CINE</a>
 								<div class="megamenu">
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletListado?operacion=actores">Actores</a></li>
+										<li class="title"><a href="ServletPeliculas?operacion=actores">Actores</a></li>
 										
 										
 									</ul>
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletListado?operacion=peliculas">Peliculas</a></li>
+										<li class="title"><a href="ServletPeliculas?operacion=peliculas">Peliculas</a></li>
                                     	
 									</ul>
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletListado?operacion=directores">Directores</a></li>
+										<li class="title"><a href="ServletPeliculas?operacion=directores">Directores</a></li>
 									
 									</ul>
 									<div class="single-mega cn-col-4">
@@ -77,7 +77,7 @@
 			<div class="header-meta d-flex clearfix justify-content-end">
 				<!-- Search Area -->
 				<div class="search-area">
-					<form action="Controlador" method="POST">
+					<form action="ServletBarraBusqueda" method="POST">
 						<input type="search" name="search" id="headerSearch"
 							placeholder="Type for search">
 						<button type="submit">
@@ -85,16 +85,11 @@
 						</button>
 					</form>
 				</div>
-				<!-- User Login Info -->
-				<div class="user-login-info">
-					<a href="GestionCamisetas.jsp">Panel Admin></a>
-				</div>
-				
 				<!-- Favourite Area -->
-				<div class="favourite-area">
-					<a href="#"><p>Bienvenido: ${sessionScope.usuario}</p></a>
+				<!--<div class="favourite-area">
+					<a href="#"><img src="img/core-img/heart.svg" alt=""></a>
 				</div>
-				
+				-->
 				<!-- User Login Info -->
 				<div class="user-login-info">
 					<a href="formularioPeliculas.jsp">Admin</a>
