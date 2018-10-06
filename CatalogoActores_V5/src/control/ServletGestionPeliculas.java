@@ -2,7 +2,9 @@ package control;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -40,22 +42,22 @@ public class ServletGestionPeliculas extends HttpServlet {
 				p.setVista(Boolean.parseBoolean(request.getParameter("vista")));
 //				p.setFechaEstreno(new SimpleDateFormat().parse((request.getParameter("fecha"))));
 				p.setIdActores(Integer.parseInt(request.getParameter("idactores")));
-				p.setImg(request.getParameter("img"));
+				p.setImg("img/" + request.getParameter("img"));
 				p.setSinopsis(request.getParameter("sinopsis"));
 				
-				new DAOPeliculas().insertarPeliculas(p);;
+				new DAOPeliculas().insertarPeliculas(p);
 				RequestDispatcher view = request.getRequestDispatcher("/formularioPeliculas.jsp");
 				view.forward(request, response);
 
-			} //else if(operacion.equalsIgnoreCase("baja")) {
-//				int id = Integer.parseInt(request.getParameter("id"));
-//				
-//				new BackOfficeDAO().bajaCamiseta(id);
-//				RequestDispatcher view = request.getRequestDispatcher("/GestionCamisetas.jsp");
-//				view.forward(request, response);
-//				
-//				
-//			} else if(operacion.equalsIgnoreCase("modificar")) {
+			} else if(operacion.equalsIgnoreCase("baja")) {
+				String titulo = request.getParameter("titulo");
+				
+				new DAOPeliculas().eliminarPelicula(titulo);
+				RequestDispatcher view = request.getRequestDispatcher("/formularioPeliculas.jsp");
+				view.forward(request, response);
+				
+				
+			} //else if(operacion.equalsIgnoreCase("modificar")) {
 //				int id = Integer.parseInt(request.getParameter("id"));
 //				String color = request.getParameter("color");
 //				float precio = Float.parseFloat(request.getParameter("precio"));
@@ -71,17 +73,19 @@ public class ServletGestionPeliculas extends HttpServlet {
 //				RequestDispatcher view = request.getRequestDispatcher("/GestionCamisetas.jsp");
 //				view.forward(request, response);
 //	
-//			}else if(operacion.equalsIgnoreCase("consulta")) {
-//				
-//				int id = Integer.parseInt(request.getParameter("id"));
-//
-//				List<Camiseta> cam = new ArrayList<Camiseta>();
-//				cam = new BackOfficeDAO().consultarCamiseta(id);
-//				request.setAttribute("Camiseta", cam);
-//				
-//				RequestDispatcher view = request.getRequestDispatcher("/GestionCamisetas.jsp");
-//				view.forward(request, response);
 //			}
+		else if(operacion.equalsIgnoreCase("consulta")) {
+				
+				String titulo = request.getParameter("titulo");
+
+				ArrayList<Pelicula> peliculas = new ArrayList<Pelicula>();
+				peliculas = new DAOPeliculas().buscarPelicula(titulo);
+						
+				request.setAttribute("Pelicula", peliculas);
+				
+				RequestDispatcher view = request.getRequestDispatcher("/formularioPeliculas.jsp");
+				view.forward(request, response);
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

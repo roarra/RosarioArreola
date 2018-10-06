@@ -5,57 +5,57 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>jQuery UI Accordion - Collapse content</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  
-  function changeInsertarCamisetaDiv(){
-	    var divId = document.getElementById("desplegableInsertar");
-	    var currentClass = divId.className;
-	    if (currentClass == "noMostrar") { // si el elemento ya esta oculto
-	        divId.className = "mostrar";   // muestro el elemento
-	    } else {
-	        divId.className = "noMostrar";  // si el elemento NO esta ocutlo, lo oculto
-	    }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery UI Accordion - Collapse content</title>
+<link rel="stylesheet"
+	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	function changeInsertarCamisetaDiv() {
+		var divId = document.getElementById("desplegableInsertar");
+		var currentClass = divId.className;
+		if (currentClass == "noMostrar") { // si el elemento ya esta oculto
+			divId.className = "mostrar"; // muestro el elemento
+		} else {
+			divId.className = "noMostrar"; // si el elemento NO esta ocutlo, lo oculto
+		}
 	}
-  function changeModificarCamisetaDiv(){
-	    var divId = document.getElementById("desplegableModificar");
-	    var currentClass = divId.className;
-	    if (currentClass == "noMostrar") { // si el elemento ya esta oculto
-	        divId.className = "mostrar";   // muestro el elemento
-	    } else {
-	        divId.className = "noMostrar";  // si el elemento NO esta ocutlo, lo oculto
-	    }
+	function changeModificarCamisetaDiv() {
+		var divId = document.getElementById("desplegableModificar");
+		var currentClass = divId.className;
+		if (currentClass == "noMostrar") { // si el elemento ya esta oculto
+			divId.className = "mostrar"; // muestro el elemento
+		} else {
+			divId.className = "noMostrar"; // si el elemento NO esta ocutlo, lo oculto
+		}
 	}
-  function changeEliminarCamisetaDiv(){
-	    var divId = document.getElementById("desplegableEliminar");
-	    var currentClass = divId.className;
-	    if (currentClass == "noMostrar") { // si el elemento ya esta oculto
-	        divId.className = "mostrar";   // muestro el elemento
-	    } else {
-	        divId.className = "noMostrar";  // si el elemento NO esta ocutlo, lo oculto
-	    }
+	function changeEliminarCamisetaDiv() {
+		var divId = document.getElementById("desplegableEliminar");
+		var currentClass = divId.className;
+		if (currentClass == "noMostrar") { // si el elemento ya esta oculto
+			divId.className = "mostrar"; // muestro el elemento
+		} else {
+			divId.className = "noMostrar"; // si el elemento NO esta ocutlo, lo oculto
+		}
 	}
-  function changeConsultarCamisetaDiv(){
-	    var divId = document.getElementById("desplegableConsultar");
-	    var currentClass = divId.className;
-	    if (currentClass == "noMostrar") { // si el elemento ya esta oculto
-	        divId.className = "mostrar";   // muestro el elemento
-	    } else {
-	        divId.className = "noMostrar";  // si el elemento NO esta ocutlo, lo oculto
-	    }
+	function changeConsultarCamisetaDiv() {
+		var divId = document.getElementById("desplegableConsultar");
+		var currentClass = divId.className;
+		if (currentClass == "noMostrar") { // si el elemento ya esta oculto
+			divId.className = "mostrar"; // muestro el elemento
+		} else {
+			divId.className = "noMostrar"; // si el elemento NO esta ocutlo, lo oculto
+		}
 	}
-  
-  $( function() {
-    $( "#accordion" ).accordion({
-      collapsible: true
-    });
-  } );
-  </script>
+
+	$(function() {
+		$("#accordion").accordion({
+			collapsible : true
+		});
+	});
+</script>
 <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <!-- Title  -->
@@ -99,17 +99,20 @@
 							<li><a href="#">CINE</a>
 								<div class="megamenu">
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletPeliculas?operacion=actores">Actores</a></li>
-										
-										
+										<li class="title"><a
+											href="ServletPeliculas?operacion=actores">Actores</a></li>
+
+
 									</ul>
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletPeliculas?operacion=peliculas">Peliculas</a></li>
-                                    	
+										<li class="title"><a
+											href="ServletPeliculas?operacion=peliculas">Peliculas</a></li>
+
 									</ul>
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletPeliculas?operacion=directores">Directores</a></li>
-									
+										<li class="title"><a
+											href="ServletPeliculas?operacion=directores">Directores</a></li>
+
 									</ul>
 									<div class="single-mega cn-col-4">
 										<img src="img/camisetas/patopeque.jpg" alt="">
@@ -125,7 +128,7 @@
 			<div class="header-meta d-flex clearfix justify-content-end">
 				<!-- Search Area -->
 				<div class="search-area">
-				<form action="ServletBarraBusqueda" method="POST">
+					<form action="ServletBarraBusqueda" method="POST">
 						<input type="search" name="search" id="headerSearch"
 							placeholder="Type for search">
 						<button type="submit">
@@ -153,7 +156,7 @@
 	</header>
 	<!-- ##### Header Area End ##### -->
 
-	
+
 	<!-- ##### Checkout Area Start ##### -->
 	<div class="checkout_area section-padding-80">
 		<div class="container">
@@ -167,151 +170,180 @@
 							</div>
 
 
-                            <form action="ServletFormularioPelicula?operacion=alta" method="POST">
-                            <div class="row">
-                           	<label><a href="#" onclick="changeInsertarCamisetaDiv();"><h6>Insertar Pelicula</h6></a></label>
-                           		<div id="desplegableInsertar" class="noMostrar">
-                           			 
-                                	<div class="col-md-12 mb-3">
-	                                    <label for="apellidos">Titulo</label>
-                                    	<input type="text" class="form-control"  value="" name="titulo">
-                                	</div>
-                                <div class="col-12 mb-3">
-                                    <label for="Direccion">Director</label>
-                                    <input type="text" class="form-control mb-3" value="" name="director">
-                                   
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="codigoPostal">Vista</label>
-                                    <input type="text" class="form-control" value="" name="vista">
-                                </div>
-                                <!--<div class="col-12 mb-3">
+							<form action="ServletFormularioPelicula?operacion=alta"
+								method="POST">
+								<div class="row">
+									<label><a href="#"
+										onclick="changeInsertarCamisetaDiv();"><h6>Insertar
+												Pelicula</h6></a></label>
+									<div id="desplegableInsertar" class="noMostrar">
+
+										<div class="col-md-12 mb-3">
+											<label for="apellidos">Titulo</label> <input type="text"
+												class="form-control" value="" name="titulo">
+										</div>
+										<div class="col-12 mb-3">
+											<label for="Direccion">Director</label> <input type="text"
+												class="form-control mb-3" value="" name="director">
+
+										</div>
+										<div class="col-12 mb-3">
+											<label for="codigoPostal">Vista</label> <input type="text"
+												class="form-control" value="" name="vista">
+										</div>
+										<!--<div class="col-12 mb-3">
                                     <label for="ciudad">Fecha Estreno</label>
                                     <input type="text" class="form-control"  value="" name="fecha">
                                 </div> -->
-                                <div class="col-12 mb-3">
-                                    <label for="codigoPostal">ID Actores</label>
-                                    <input type="text" class="form-control" value="" name="idactores">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="provincia">IMG</label>
-                                    <input type="text" class="form-control"  value="" name="img">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="numero">Sinopsis</label>
-                                    <input type="text" class="form-control"  value="" name="sinopsis">
-                                     <br>
-                                    <button class="btn essence-btn">Alta</button>
-                                    <br>
-                                </div>                              
-                               </div>
-                           		</div>                           
-                              </form>
-                              
-                            <form action="ServletCamiseta?operacion=modificar" method="POST">
-                            <div class="row">
-                            <label><a href="#" onclick="changeModificarCamisetaDiv();"><h6>Modificar Pelicula</h6></a></label>
-                            <div id="desplegableModificar" class="noMostrar">
-                           	 	<div class="col-md-12 mb-3">
-                                    <label for="nombre">Id</label>
-                                    <input type="text" class="form-control"  value="" name="id">
-                                </div>
-                                <div class="col-md-12 mb-3">
-                                    <label for="nombre">Color</label>
-                                    <input type="text" class="form-control"  value="" name="color">
-                                </div>
-                                <div class="col-md-12 mb-3">
-                                    <label for="apellidos">Precio</label>
-                                    <input type="text" class="form-control"  value="" name="precio">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="Direccion">Genero</label>
-                                    <input type="text" class="form-control mb-3" value="" name="genero">   
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="codigoPostal">Talla</label>
-                                    <input type="text" class="form-control" value="" name="talla">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="ciudad">Categoria</label>
-                                    <input type="text" class="form-control"  value="" name="categoria">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="provincia">Stock</label>
-                                    <input type="text" class="form-control"  value="" name="stock">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label for="numero">Imagen</label>
-                                    <input type="text" class="form-control"  value="" name="url">
-                                </div>
-                                <div class="col-12 mb-4">
-                                    <label for="correo">Descripcion</label>
-                                    <input type="text" class="form-control"  value="" name="descripcion">
-                                    <br>
-                                    <button class="btn essence-btn">Modificar</button>
-                                    <br>
-                                </div>
-                             </div>
-                             </div>
-                              </form>
-                              
-                              <form action="ServletCamiseta?operacion=baja" method="POST">
-                            <div class="row">
-                            <label><a href="#" onclick="changeEliminarCamisetaDiv();"><h6>Eliminar Pelicula</h6></a></label>
-                           		<div id="desplegableEliminar" class="noMostrar">
-                                <div class="col-md-12 mb-3">
-                                    <label for="nombre">Id</label>
-                                    <input type="text" class="form-control"  value="" name="id">
-                                    <br>
-                                    <button class="btn essence-btn">Baja</button>
-                                </div>
-                               </div>
-                               </div>                     
-                              </form>
-                              
-                              <form action="ServletCamiseta?operacion=consulta" method="POST">
-                            <div class="row">
-                            <label><a href="#" onclick="changeConsultarCamisetaDiv();"><h6>Consultar Pelicula</h6></a></label>
-                           		<div id="desplegableConsultar" class="noMostrar">                            
-                                <div class="col-md-12 mb-3">
-                                    <label for="nombre">Id</label>
-                                    <input type="text" class="form-control"  value="" name="id">
-                                    <br>
-                                    <button class="btn essence-btn">Consulta</button>
-                                </div>
-                               </div>
-                              </form>
-                              
-                              
-                         <!-- Espacio para la consulta de camisetas -->
-                        <c:forEach var="mi" items="${Camiseta}">
-                         
-        					<div class="single_product_desc clearfix">
-  
-                        		<div >
-                        			<p><span><b>GENERO: </b>${mi.genero}</span>
-                        			<p><span><b>CATEGORIA: </b> ${mi.categoria}</span>
-                    				<p><span><b>TALLA: </b> ${mi.talla}</span>
-                    				<p><span><b>COLOR: </b> ${mi.color}</span>
-                   					<p><span><b>STOCK: </b> ${mi.stock}</span>
-                   					<p><span><b>PRECIO: </b>${mi.precio}€</span>
-                   					<p><span><b>DESCRIPCION: </b> ${mi.descripcion}</span>			
-                				</div>
-        					  </div>
-        				</c:forEach>
-        				
-        				
-                              </div>
-                              </div>
-                              </div>
-                              </div>
-                              </div><br><br><br><br><br>
-                       </div>
-                              
-                            
-                        
-                              
-								<!-- <div class="row">
+										<div class="col-12 mb-3">
+											<label for="codigoPostal">ID Actores</label> <input
+												type="text" class="form-control" value="" name="idactores">
+										</div>
+										<!-- <div class="col-12 mb-3">
+											<label for="provincia">IMG</label> <input type="text"
+												class="form-control" value="" name="img">
+										</div> -->
+										<div class="col col-md-7 col-xl-8">
+											<div class="custom-file custom-file-sm">
+												<input type="file" name="img"
+													data-max-file-size="1048576"
+													data-file-error-1="El archivo que has añadido supera el límite máximo de 1 MB. Por favor, selecciona otro archivo."
+													id="cardScanFile" class="form-control custom-file-input"><label
+													for="cardScanFile" data-initial-value="Elegir archivo"
+													class="custom-file-label text-truncate custom-file-label-sm mb-0"
+													data-toggle="tooltip" data-placement="bottom"
+													style="max-width: 225px;"
+													data-original-title="Elegir archivo">Elegir IMAGEN</label>
+											</div>
+										</div>
+										<div class="col-12 mb-3">
+											<label for="numero">Sinopsis</label> <input type="text"
+												class="form-control" value="" name="sinopsis"> <br>
+											<button class="btn essence-btn">Alta</button>
+											<br>
+										</div>
+									</div>
+								</div>
+							</form>
+
+							<form action="ServletFormularioPelicula?operacion=modificar" method="POST">
+								<div class="row">
+									<label><a href="#"
+										onclick="changeModificarCamisetaDiv();"><h6>Modificar
+												Pelicula</h6></a></label>
+									<div id="desplegableModificar" class="noMostrar">
+										<div class="col-md-12 mb-3">
+											<label for="apellidos">Titulo</label> <input type="text"
+												class="form-control" value="" name="titulo">
+										</div>
+										<div class="col-12 mb-3">
+											<label for="Direccion">Director</label> <input type="text"
+												class="form-control mb-3" value="" name="director">
+
+										</div>
+										<div class="col-12 mb-3">
+											<label for="codigoPostal">Vista</label> <input type="text"
+												class="form-control" value="" name="vista">
+										</div>
+										<!--<div class="col-12 mb-3">
+                                    <label for="ciudad">Fecha Estreno</label>
+                                    <input type="text" class="form-control"  value="" name="fecha">
+                                </div> -->
+										<div class="col-12 mb-3">
+											<label for="codigoPostal">ID Actores</label> <input
+												type="text" class="form-control" value="" name="idactores">
+										</div>
+										<!-- <div class="col-12 mb-3">
+											<label for="provincia">IMG</label> <input type="text"
+												class="form-control" value="" name="img">
+										</div> -->
+										<div class="col col-md-7 col-xl-8">
+											<div class="custom-file custom-file-sm">
+												<input type="file" name="img"
+													data-max-file-size="1048576"
+													data-file-error-1="El archivo que has añadido supera el límite máximo de 1 MB. Por favor, selecciona otro archivo."
+													id="cardScanFile" class="form-control custom-file-input"><label
+													for="cardScanFile" data-initial-value="Elegir archivo"
+													class="custom-file-label text-truncate custom-file-label-sm mb-0"
+													data-toggle="tooltip" data-placement="bottom"
+													style="max-width: 225px;"
+													data-original-title="Elegir archivo">Elegir IMAGEN</label>
+											</div>
+										</div>
+										<div class="col-12 mb-3">
+											<label for="numero">Sinopsis</label> <input type="text"
+												class="form-control" value="" name="sinopsis"> <br>
+											<button class="btn essence-btn">MODIFICAR</button>
+											<br>
+										</div>
+									</div>
+								</div>
+							</form>
+
+							<form action="ServletFormularioPelicula?operacion=baja" method="POST">
+								<div class="row">
+									<label><a href="#"
+										onclick="changeEliminarCamisetaDiv();"><h6>Eliminar
+												Pelicula</h6></a></label>
+									<div id="desplegableEliminar" class="noMostrar">
+										<div class="col-md-12 mb-3">
+											<label for="nombre">TITULO</label> <input type="text"
+												class="form-control" value="" name="titulo"> <br>
+											<button class="btn essence-btn">ELIMINAR</button>
+										</div>
+									</div>
+								</div>
+							</form>
+
+							<form action="ServletFormularioPelicula?operacion=consulta" method="POST">
+								<div class="row">
+									<label><a href="#"
+										onclick="changeConsultarCamisetaDiv();"><h6>Consultar
+												Pelicula</h6></a></label>
+									<div id="desplegableConsultar" class="noMostrar">
+										<div class="col-md-12 mb-3">
+											<label for="nombre">TITULO</label> <input type="text"
+												class="form-control" value="" name="consulta"> <br>
+											<button class="btn essence-btn">Consultar</button>
+										</div>
+									</div>
+							</form>
+
+
+							<!-- Espacio para la consulta de camisetas -->
+							<c:forEach var="mi" items="${Pelicula}">
+
+								<div class="single_product_desc clearfix">
+
+									<div>
+										<p>
+											<span><b>TITULO: </b>${mi.titulo}</span>
+										<p>
+											<span><b>DIRECTOR: </b> ${mi.director}</span>
+										<p>
+											<span><b>VISTA: </b> ${mi.vista}</span>
+										<p>
+											<span><b>FECHA ESTRENO: </b> ${mi.fechaEstreno}</span>
+										<p>
+											<span><b>SINOPSIS: </b> ${mi.sinopsis}</span>
+										
+									</div>
+								</div>
+							</c:forEach>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br> <br> <br> <br> <br>
+	</div>
+
+
+
+
+	<!-- <div class="row">
 									<div class="catagories-menu">	
 										<ul id="menu-content2" class="menu-content collapse show">
 											Single Item
@@ -377,8 +409,8 @@
 												<p></p>
 												<input type="submit" class="btn essence-btn" value="Baja">
 												</form>  -->
-											<!-- Single Item -->
-											<!-- <form action="ServletCamiseta?operacion=modificar" method="POST">
+	<!-- Single Item -->
+	<!-- <form action="ServletCamiseta?operacion=modificar" method="POST">
 											<li data-target="#shoes"><a href="#"><font size=4>Eliminar Producto</font></a>
 												<ul id="shoes">
 													<li><a href="#">Id</a></li>
@@ -387,8 +419,8 @@
 												</ul></li>
 												<p></p>
 												<input type="submit" class="btn essence-btn" value="Modificar"> -->
-											<!-- Single Item -->
-											<!-- <form action="ServletCamiseta?operacion=consulta" method="POST">
+	<!-- Single Item -->
+	<!-- <form action="ServletCamiseta?operacion=consulta" method="POST">
 											<li data-target="#shoes"><a href="#"><font size=4>Consultar Producto</font></a>
 														
 												<ul id="shoes">
@@ -398,10 +430,10 @@
 												</ul></li>
 												<p></p>
 												<input type="submit" class="btn essence-btn" value="Consultar"> -->
-										
-			
 
-		<!--   <div class="col-12 col-md-6 col-lg-5 ml-lg-auto">
+
+
+	<!--   <div class="col-12 col-md-6 col-lg-5 ml-lg-auto">
                     <div class="order-details-confirmation">
 
                         <div class="cart-page-heading">

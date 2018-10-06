@@ -3,6 +3,7 @@ package control;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import beans.Actor;
@@ -37,7 +38,7 @@ public class Prueba {
 
 		Actor a1 = new Actor("Diego Luna", "Mexican");
 		Actor a2 = new Actor("Antonio de la Torre", "Spanish");
-		Actor a3 = new Actor("David Tennant", "Inglés");
+		Actor a3 = new Actor("David Tennant", "Inglï¿½s");
 
 		DAO gestionBBDD = new DAO();
 
@@ -50,12 +51,12 @@ public class Prueba {
 
 	public void pruebasTres() {
 
-//		Pelicula p1 = new Pelicula("Harry Potter 3", "Alfonso Cuarón", true, LocalDate(2004, 6, 18), 1);
+//		Pelicula p1 = new Pelicula("Harry Potter 3", "Alfonso Cuarï¿½n", true, LocalDate(2004, 6, 18), 1);
 //		Pelicula p2 = new Pelicula("Thor", "Kenneth Brannagh", true, LocalDate(2011, 3, 29), 2);
 //		Pelicula p3 = new Pelicula("Doctor Strange", "Scott Derrickson", true, LocalDate(2016, 10, 28), 3);
 //		Pelicula p4 = new Pelicula("It: Chapter Two", "Andy Muschietti", false, LocalDate(2019, 9, 06), 4);
 //		Pelicula p5 = new Pelicula("Shame", "Steve McQueen", true, LocalDate(2012, 2, 17), 5);
-//		Pelicula p6 = new Pelicula("La hora más oscura", "Kathryn Bigelow", false, LocalDate(2013, 1, 4), 6);
+//		Pelicula p6 = new Pelicula("La hora mï¿½s oscura", "Kathryn Bigelow", false, LocalDate(2013, 1, 4), 6);
 
 		DAOPeliculas gestionBBDD2 = new DAOPeliculas();
 
@@ -81,15 +82,12 @@ public class Prueba {
 
 		DAOPeliculas gestionBBDD2 = new DAOPeliculas();
 
-		List<Pelicula> thor = gestionBBDD2.buscarPelicula("Thor");
-
-		for (Pelicula elemento : thor) {
-
+		ArrayList <Pelicula> lista = gestionBBDD2.buscarPelicula("Thor");
+		
+		for (Pelicula elemento : lista) {
+			
 			Utilidades.write(elemento.toString());
 		}
-
-		gestionBBDD2.modificarPelicula("Thor", "Thorki lover", "Kenneth Branagh el Grande", false,
-				LocalDate(2018, 8, 25), 2);
 		
 	}
 	
