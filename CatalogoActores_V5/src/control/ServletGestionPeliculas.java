@@ -59,20 +59,22 @@ public class ServletGestionPeliculas extends HttpServlet {
 				
 			}else if(operacion.equalsIgnoreCase("modificar")) {
 				
-				String titulo = request.getParameter("titulo");
-				String director = request.getParameter("director");
-				boolean vista = Boolean.parseBoolean(request.getParameter("vista"));
-				Date fechaEstreno = null;
-				int idActores = Integer.parseInt(request.getParameter("idActores"));
-				String img = request.getParameter("img");
-				String sinopsis = request.getParameter("sinopsis");
-				
+					String tbusqueda = request.getParameter("tbusqueda");
 								
-				new DAOPeliculas().modificarPelicula(titulo, titulo, director, vista, fechaEstreno, idActores);
-				
-				RequestDispatcher view = request.getRequestDispatcher("/GestionCamisetas.jsp");
-				view.forward(request, response);
-	
+					String titulo = request.getParameter("titulo");
+					String director = request.getParameter("director");
+					boolean vista = Boolean.parseBoolean(request.getParameter("vista"));
+					Date fechaEstreno = null;
+					int idActores = Integer.parseInt(request.getParameter("idactores"));
+					String img = request.getParameter("img");
+					String sinopsis = request.getParameter("sinopsis");
+					
+									
+					new DAOPeliculas().modificarPelicula(tbusqueda, titulo, director, vista, fechaEstreno, idActores, img, sinopsis);
+					
+					RequestDispatcher view = request.getRequestDispatcher("/formularioPeliculas.jsp");
+					view.forward(request, response);
+
 			}
 		else if(operacion.equalsIgnoreCase("consulta")) {
 				
@@ -81,7 +83,7 @@ public class ServletGestionPeliculas extends HttpServlet {
 				ArrayList<Pelicula> peliculas = new ArrayList<Pelicula>();
 				peliculas = new DAOPeliculas().buscarPelicula(titulo);
 						
-				request.setAttribute("Pelicula", peliculas);
+				request.setAttribute("PeliculaUpdate", peliculas);
 				
 				RequestDispatcher view = request.getRequestDispatcher("/formularioPeliculas.jsp");
 				view.forward(request, response);

@@ -32,7 +32,7 @@
 			<!-- Classy Menu -->
 			<nav class="classy-navbar" id="essenceNav">
 				<!-- Logo -->
-				<a class="nav-brand" href="index.html">INICIO</a>
+				<a class="nav-brand" href="index.jsp">INICIO</a>
 				<!-- Navbar Toggler -->
 				<div class="classy-navbar-toggler">
 					<span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -59,12 +59,9 @@
 										<li class="title"><a href="ServletPeliculas?operacion=peliculas">Peliculas</a></li>
                                     	
 									</ul>
-									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletPeliculas?operacion=directores">Directores</a></li>
 									
-									</ul>
 									<div class="single-mega cn-col-4">
-										<img src="img/camisetas/patopeque.jpg" alt="">
+										<img src="img/imgindex.jpg" alt="">
 									</div>
 								</div>
 						</ul>

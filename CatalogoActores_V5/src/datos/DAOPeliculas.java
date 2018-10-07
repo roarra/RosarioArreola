@@ -109,7 +109,7 @@ public class DAOPeliculas extends Pelicula {
 			st = conexion.getConnection().createStatement();
 
 			rs = st.executeQuery(
-					"SELECT TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, IMG, SINOPSIS FROM peliculas WHERE TITULO= '" + titulo
+					"SELECT TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, ID_ACTORES, IMG, SINOPSIS FROM peliculas WHERE TITULO= '" + titulo
 							+ "';");
 			while (rs.next()) {
 				Pelicula pelicula = new Pelicula();
@@ -117,6 +117,7 @@ public class DAOPeliculas extends Pelicula {
 				pelicula.setDirector(rs.getString("DIRECTOR"));
 				pelicula.setVista(rs.getBoolean("VISTA"));
 				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO"));
+				pelicula.setIdActores(rs.getInt("ID_ACTORES"));
 				pelicula.setImg(rs.getString("IMG"));
 				pelicula.setSinopsis(rs.getString("SINOPSIS"));
 				listaPeliculas.add(pelicula);
@@ -134,8 +135,8 @@ public class DAOPeliculas extends Pelicula {
 
 	// Actualizar pel�culas
 
-	public void modificarPelicula(String nbusqueda, String titulo, String director, boolean vista, Date fechaEstreno,
-			int idActores) {
+	public void modificarPelicula(String tbusqueda, String titulo, String director, boolean vista, Date fechaEstreno,
+			int idActores, String img, String sinopsis) {
 
 		Statement st = null;
 
@@ -145,8 +146,8 @@ public class DAOPeliculas extends Pelicula {
 			st = conexion.getConnection().createStatement();
 
 			String query = "UPDATE peliculas SET TITULO = '" + titulo + "', DIRECTOR = '" + director + "', VISTA = "
-					+ vista + ", FECHA_ESTRENO = " + fechaEstreno + ", ID_ACTORES = " + idActores + " WHERE TITULO = '"
-					+ nbusqueda + "';";
+					+ vista + ", FECHA_ESTRENO = " + fechaEstreno + ", ID_ACTORES = " + idActores + ", IMG = ' " + img + "', SINOPSIS = '" + sinopsis + "' WHERE TITULO = '"
+					+ tbusqueda + "';";
 
 			st.executeUpdate(query);
 
