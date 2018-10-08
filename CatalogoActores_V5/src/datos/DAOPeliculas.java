@@ -146,7 +146,7 @@ public class DAOPeliculas extends Pelicula {
 			st = conexion.getConnection().createStatement();
 
 			String query = "UPDATE peliculas SET TITULO = '" + titulo + "', DIRECTOR = '" + director + "', VISTA = "
-					+ vista + ", FECHA_ESTRENO = " + fechaEstreno + ", ID_ACTORES = " + idActores + ", IMG = ' " + img + "', SINOPSIS = '" + sinopsis + "' WHERE TITULO = '"
+					+ vista + ", FECHA_ESTRENO = " + fechaEstreno + ", ID_ACTORES = " + idActores + ", IMG = '" + img + "', SINOPSIS = '" + sinopsis + "' WHERE TITULO = '"
 					+ tbusqueda + "';";
 
 			st.executeUpdate(query);

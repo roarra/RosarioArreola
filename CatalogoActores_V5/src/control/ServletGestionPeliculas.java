@@ -66,7 +66,14 @@ public class ServletGestionPeliculas extends HttpServlet {
 					boolean vista = Boolean.parseBoolean(request.getParameter("vista"));
 					Date fechaEstreno = null;
 					int idActores = Integer.parseInt(request.getParameter("idactores"));
-					String img = request.getParameter("img");
+					String img = request.getParameter("img").trim();
+					if(img.startsWith("img/")){
+						img = request.getParameter("img");
+					}else {
+						
+						img = "img/" + request.getParameter("img");
+					}
+					
 					String sinopsis = request.getParameter("sinopsis");
 					
 									
