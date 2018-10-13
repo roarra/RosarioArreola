@@ -43,14 +43,10 @@ public class Prueba {
 
 	}
 
-	private java.util.Date LocalDate(int i, int j, int k) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public void pruebasTres() {
 
-//		Pelicula p1 = new Pelicula("Harry Potter 3", "Alfonso Cuarón", true, LocalDate(2004, 6, 18), 1);
+//		Pelicula p1 = new Pelicula("Harry Potter 3", "Alfonso Cuarón", true, 2004/07/08, 1);
 //		Pelicula p2 = new Pelicula("Thor", "Kenneth Brannagh", true, LocalDate(2011, 3, 29), 2);
 //		Pelicula p3 = new Pelicula("Doctor Strange", "Scott Derrickson", true, LocalDate(2016, 10, 28), 3);
 //		Pelicula p4 = new Pelicula("It: Chapter Two", "Andy Muschietti", false, LocalDate(2019, 9, 06), 4);
