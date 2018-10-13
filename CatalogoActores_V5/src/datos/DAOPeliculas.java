@@ -38,7 +38,7 @@ public class DAOPeliculas extends Pelicula {
 			}
 			con.getConnection().close();
 		} catch (SQLException ex) {
-			Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
 		}
 		return listaPeliculas;
 	}
@@ -64,7 +64,7 @@ public class DAOPeliculas extends Pelicula {
 
 		} catch (SQLException ex) {
 
-			Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
 
 		}
 	}
@@ -88,7 +88,7 @@ public class DAOPeliculas extends Pelicula {
 
 		} catch (SQLException ex) {
 
-			Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
 
 		}
 
@@ -125,7 +125,7 @@ public class DAOPeliculas extends Pelicula {
 
 		} catch (SQLException ex) {
 
-			Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
 
 		}
 		return listaPeliculas;
@@ -152,7 +152,7 @@ public class DAOPeliculas extends Pelicula {
 
 		} catch (SQLException ex) {
 
-			Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
 
 		}
 	}

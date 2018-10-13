@@ -34,7 +34,7 @@ public class DAOActores {
 			}
 			con.getConnection().close();
 		} catch (SQLException ex) {
-			Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(DAOActores.class.getName()).log(Level.SEVERE, null, ex);
 		}
 		return listaActores;
 	}
@@ -59,7 +59,7 @@ public class DAOActores {
 
 		} catch (SQLException ex) {
 
-			Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(DAOActores.class.getName()).log(Level.SEVERE, null, ex);
 
 		}
 	}
@@ -83,7 +83,7 @@ public class DAOActores {
 
 		} catch (SQLException ex) {
 
-			Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(DAOActores.class.getName()).log(Level.SEVERE, null, ex);
 
 		}
 
@@ -109,7 +109,7 @@ public class DAOActores {
 
 		} catch (SQLException ex) {
 
-			Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
+			Logger.getLogger(DAOActores.class.getName()).log(Level.SEVERE, null, ex);
 
 		}
 	}
