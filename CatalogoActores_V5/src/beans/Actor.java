@@ -5,36 +5,39 @@ import java.util.List;
 
 public class Actor extends Persona{
 	
-	private List <Pelicula> peliculas;
 	private int cantidadPeliculas;
+	private String img;
 	
 	public Actor() {
 		super();
 	}
 
-	public Actor(String nombre, String nacionalidad) {
+	public Actor(String nombre, String nacionalidad, String img) {
 		super(nombre, nacionalidad);
-		peliculas = new ArrayList<>();
-		cantidadPeliculas = peliculas.size();
+
+		cantidadPeliculas = 0;
+	}
+	
+	public String getImg() {
+		return img;
 	}
 
-	public List<Pelicula> getPeliculas() {
-		return peliculas;
+	public void setImg(String img) {
+		this.img = img;
 	}
 
-	public void setPeliculas(List<Pelicula> peliculas) {
-		this.peliculas = peliculas;
+	public void setCantidadPeliculas(int cantidadPeliculas) {
+		this.cantidadPeliculas = cantidadPeliculas;
 	}
 
 	public int getCantidadPeliculas() {
 		return cantidadPeliculas;
 	}
+	
 
-	@Override
-	public String toString() {
-		return "Actor [peliculas=" + peliculas + ", cantidadPeliculas=" + cantidadPeliculas + ", toString()="
-				+ super.toString() + "]";
-	}
+	
+
+	
 	
 	
 
