@@ -1,10 +1,11 @@
 package control;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
+import java.text.DateFormat;
+
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -39,9 +40,8 @@ public class ServletGestionPeliculas extends HttpServlet {
 				
 				p.setTitulo(request.getParameter("titulo"));
 				p.setDirector(request.getParameter("director"));
-				p.setVista(Boolean.parseBoolean(request.getParameter("vista")));
-//				p.setFechaEstreno(new SimpleDateFormat().parse((request.getParameter("fecha"))));
-				p.setIdActores(Integer.parseInt(request.getParameter("idactores")));
+				p.setVista((request.getParameter("vista")));
+				//p.setFechaEstreno(DateFormat.getDateInstance().parse(request.getParameter("fecha")));
 				p.setImg("img/" + request.getParameter("img"));
 				p.setSinopsis(request.getParameter("sinopsis"));
 				
@@ -63,9 +63,8 @@ public class ServletGestionPeliculas extends HttpServlet {
 								
 					String titulo = request.getParameter("titulo");
 					String director = request.getParameter("director");
-					boolean vista = Boolean.parseBoolean(request.getParameter("vista"));
+					String vista = request.getParameter("vista");
 					Date fechaEstreno = null;
-					int idActores = Integer.parseInt(request.getParameter("idactores"));
 					String img = request.getParameter("img").trim();
 					if(img.startsWith("img/")){
 						img = request.getParameter("img");
@@ -77,7 +76,7 @@ public class ServletGestionPeliculas extends HttpServlet {
 					String sinopsis = request.getParameter("sinopsis");
 					
 									
-					new DAOPeliculas().modificarPelicula(tbusqueda, titulo, director, vista, fechaEstreno, idActores, img, sinopsis);
+					new DAOPeliculas().modificarPelicula(tbusqueda, titulo, director, vista, fechaEstreno, img, sinopsis);
 					
 					RequestDispatcher view = request.getRequestDispatcher("/formularioPeliculas.jsp");
 					view.forward(request, response);

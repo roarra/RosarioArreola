@@ -191,19 +191,12 @@
 											<label for="codigoPostal">Vista</label> <input type="text"
 												class="form-control" value="" name="vista">
 										</div>
-										<!--<div class="col-12 mb-3">
-                                    <label for="ciudad">Fecha Estreno</label>
-                                    <input type="text" class="form-control"  value="" name="fecha">
-                                </div> -->
 										<div class="col-12 mb-3">
-											<label for="codigoPostal">ID Actores</label> <input
-												type="text" class="form-control" value="" name="idactores">
+											<label for="Direccion">Fecha de Estreno</label> <input type="text"
+												class="form-control mb-3" value="" name="fecha">
+
 										</div>
-										<!-- <div class="col-12 mb-3">
-											<label for="provincia">IMG</label> <input type="text"
-												class="form-control" value="" name="img">
-										</div> -->
-										<div >
+																				<div >
 											<label>IMAGEN</label>
 											<input for="cardScanFile" type="file" name="img" value="${mi.img}" class="form-control">
 										</div>
@@ -257,8 +250,6 @@
 								<%-- 	<span><b>FECHA ESTRENO: </b> <input type="text"
 											class="form-control" value="${mi.fechaEstreno}" name="fechaestreno"></span>
 								<p> --%>
-									<span><b>ID ACTORES: </b> <input type="text"
-											class="form-control" value="${mi.idActores}" name="idactores"></span>
 								<p>
 									<span><b>IMAGEN: </b>
 									<input for="cardScanFile" type="file" name="img" value="${mi.img}" class="form-control"></span>

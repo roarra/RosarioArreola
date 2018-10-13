@@ -1,31 +1,32 @@
 package beans;
 
+
 import java.util.Date;
+
 
 public class Pelicula {
 	
-	private int id;
+
 	private String titulo;
 	private String director;
-	private boolean vista;
+	private String vista;
 	private Date fechaEstreno;
-	private int idActores;
 	private String img;
 	private String sinopsis;
+	
 	
 	public Pelicula() {
 		super();
 	}
 
-	public Pelicula(String titulo, String director, boolean vista, Date fechaEstreno, int idActores, int id, String img) {
+	public Pelicula(String titulo, String director, String vista, Date fechaEstreno, String img){
 		super();
 		this.titulo = titulo;
 		this.director = director;
 		this.vista = vista;
 		this.fechaEstreno = fechaEstreno;
-		this.idActores = idActores;
-		this.id = id;
 		this.img = img;
+
 	}
 	
 	
@@ -38,13 +39,7 @@ public class Pelicula {
 		this.sinopsis = sinopsis;
 	}
 
-	public int getId() {
-		return id;
-	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public String getImg() {
 		return img;
@@ -54,13 +49,6 @@ public class Pelicula {
 		this.img = img;
 	}
 
-	public int getIdActores() {
-		return idActores;
-	}
-
-	public void setIdActores(int idActores) {
-		this.idActores = idActores;
-	}
 
 	public String getTitulo() {
 		return titulo;
@@ -78,11 +66,11 @@ public class Pelicula {
 		this.director = director;
 	}
 
-	public boolean isVista() {
+	public String getVista() {
 		return vista;
 	}
 
-	public void setVista(boolean vista) {
+	public void setVista(String vista) {
 		this.vista = vista;
 	}
 
@@ -96,10 +84,11 @@ public class Pelicula {
 
 	@Override
 	public String toString() {
-		return "Pelicula [id=" + id + ", titulo=" + titulo + ", director=" + director + ", vista=" + vista
-				+ ", fechaEstreno=" + fechaEstreno + ", idActores=" + idActores + ", img=" + img + ", sinopsis="
-				+ sinopsis + "]";
+		return "Pelicula [titulo=" + titulo + ", director=" + director + ", vista=" + vista + ", fechaEstreno="
+				+ fechaEstreno + ", img=" + img + ", sinopsis=" + sinopsis + "]";
 	}
+
+	
 
 
 	

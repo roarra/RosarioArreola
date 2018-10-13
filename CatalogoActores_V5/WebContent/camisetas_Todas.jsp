@@ -198,30 +198,17 @@
 										<!-- Product Image -->
 										<div class="product-img">
 											<img src="${mi.img}" alt="">
-											<!-- Hover Thumb -->
-<!-- 											<img class="hover-img" src="img/product-img/product-2.jpg"
-												alt=""> -->
-<!-- 											Product Badge
-											<div class="product-badge offer-badge">
-												<span>-30%</span>
-											</div> -->
-<!-- 											Favourite
-											<div class="product-favourite">
-												<a href="#" class="favme fa fa-heart"></a>
-											</div> -->
+											
 										</div>
 
 										<!-- Product Description -->
 										<div class="product-description">
 											<%-- <span>${mi.categoria}</span> --%>
-											<p class="product-price">Titulo ${mi.titulo}  -  ${mi.director}</p>
+											<p class="product-price">Titulo ${mi.titulo}  - Fecha de Estreno ${mi.fechaEstreno} - ${mi.director}</p>
 												<h6><a href="ServletPeliculas?operacion=consulta&titulo=${mi.titulo}" class="btn essence-btn">FICHA TÉCNICA</a></h6>
 											<!-- Hover Content -->
 											<div class="hover-content">
-												<!-- Add to Cart -->
-<!-- 												<div class="add-to-cart-btn">
-													<a href="#" class="btn essence-btn">Add to Cart</a>
-												</div> -->
+											
 											</div>
 										</div>
 									</div>

@@ -27,7 +27,7 @@ public class Prueba {
 //			Utilidades.write(elemento.toString());
 //		}
 		
-		gestion.modificarPelicula("Thor", "Thor", "Kenneth Branagh", true, null, 2, "img/thor.jpg", "Thor y Loki son hermanos y tienen muchas desavenencias entre ellos porque su padre no les quiere por igual.");
+//		gestion.modificarPelicula("Thor", "Thor", "Kenneth Branagh", true, null, 2, "img/thor.jpg", "Thor y Loki son hermanos y tienen muchas desavenencias entre ellos porque su padre no les quiere por igual.");
 		
 	}
 	

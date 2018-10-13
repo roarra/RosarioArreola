@@ -1,17 +1,16 @@
 package datos;
 
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.LocalDate;
+
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import beans.Actor;
+
 import beans.Pelicula;
 
 public class DAOPeliculas extends Pelicula {
@@ -19,22 +18,22 @@ public class DAOPeliculas extends Pelicula {
 	// Mostrar pel�culas
 
 	public ArrayList<Pelicula> listaPeliculas() {
-		ArrayList listaPeliculas = new ArrayList<Pelicula>();
+		ArrayList<Pelicula> listaPeliculas = new ArrayList<Pelicula>();
 		Statement st = null;
 		ResultSet rs = null;
 
 		try {
 			ConexionDB con = new ConexionDB();
 			st = con.getConnection().createStatement();
-			rs = st.executeQuery("SELECT DISTINCT TITULO,DIRECTOR,VISTA,FECHA_ESTRENO,ID_ACTORES, IMG FROM peliculas;");
+			rs = st.executeQuery("SELECT  TITULO,DIRECTOR,VISTA,FECHA_ESTRENO, IMG, SINOPSIS FROM peliculas;");
 			while (rs.next()) {
 				Pelicula pelicula = new Pelicula();
 				pelicula.setTitulo(rs.getString("TITULO"));
 				pelicula.setDirector(rs.getString("DIRECTOR"));
-				pelicula.setVista(rs.getBoolean("VISTA"));
+				pelicula.setVista(rs.getString("VISTA"));
 				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO"));
-				pelicula.setIdActores(rs.getInt("ID_ACTORES"));
 				pelicula.setImg(rs.getString("IMG"));
+				pelicula.setSinopsis(rs.getString("SINOPSIS"));
 				listaPeliculas.add(pelicula);
 			}
 			con.getConnection().close();
@@ -44,7 +43,7 @@ public class DAOPeliculas extends Pelicula {
 		return listaPeliculas;
 	}
 
-	// A�adir pel�culas
+	// insertar peliculas
 
 	public void insertarPeliculas(Pelicula pelicula) {
 
@@ -55,9 +54,9 @@ public class DAOPeliculas extends Pelicula {
 			ConexionDB conexion = new ConexionDB();
 			st = conexion.getConnection().createStatement();
 
-			String query = "INSERT INTO peliculas(TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, ID_ACTORES, IMG, SINOPSIS) VALUES ('"
-					+ pelicula.getTitulo() + "','" + pelicula.getDirector() + "'," + pelicula.isVista() + ","
-					+ /*pelicula.getFechaEstreno()*/null + "," + pelicula.getIdActores() + ",'" + pelicula.getImg() + "','" + pelicula.getSinopsis() + "');";
+			String query = "INSERT INTO peliculas(TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, IMG, SINOPSIS) VALUES ('"
+					+ pelicula.getTitulo() + "','" + pelicula.getDirector() + "','" + pelicula.getVista() + "',"
+					+ /*pelicula.getFechaEstreno()*/null + ",'" + pelicula.getImg() + "','" + pelicula.getSinopsis() + "');";
 
 			st.executeUpdate(query);
 
@@ -109,15 +108,14 @@ public class DAOPeliculas extends Pelicula {
 			st = conexion.getConnection().createStatement();
 
 			rs = st.executeQuery(
-					"SELECT TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, ID_ACTORES, IMG, SINOPSIS FROM peliculas WHERE TITULO= '" + titulo
+					"SELECT TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, IMG, SINOPSIS FROM peliculas WHERE TITULO= '" + titulo
 							+ "';");
 			while (rs.next()) {
 				Pelicula pelicula = new Pelicula();
 				pelicula.setTitulo(rs.getString("TITULO"));
 				pelicula.setDirector(rs.getString("DIRECTOR"));
-				pelicula.setVista(rs.getBoolean("VISTA"));
+				pelicula.setVista(rs.getString("VISTA"));
 				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO"));
-				pelicula.setIdActores(rs.getInt("ID_ACTORES"));
 				pelicula.setImg(rs.getString("IMG"));
 				pelicula.setSinopsis(rs.getString("SINOPSIS"));
 				listaPeliculas.add(pelicula);
@@ -135,8 +133,7 @@ public class DAOPeliculas extends Pelicula {
 
 	// Actualizar pel�culas
 
-	public void modificarPelicula(String tbusqueda, String titulo, String director, boolean vista, Date fechaEstreno,
-			int idActores, String img, String sinopsis) {
+	public void modificarPelicula(String tbusqueda, String titulo, String director, String vista, Date fechaEstreno, String img, String sinopsis) {
 
 		Statement st = null;
 
@@ -146,7 +143,7 @@ public class DAOPeliculas extends Pelicula {
 			st = conexion.getConnection().createStatement();
 
 			String query = "UPDATE peliculas SET TITULO = '" + titulo + "', DIRECTOR = '" + director + "', VISTA = "
-					+ vista + ", FECHA_ESTRENO = " + fechaEstreno + ", ID_ACTORES = " + idActores + ", IMG = '" + img + "', SINOPSIS = '" + sinopsis + "' WHERE TITULO = '"
+					+ vista + ", FECHA_ESTRENO = " + fechaEstreno + ", IMG = '" + img + "', SINOPSIS = '" + sinopsis + "' WHERE TITULO = '"
 					+ tbusqueda + "';";
 
 			st.executeUpdate(query);
