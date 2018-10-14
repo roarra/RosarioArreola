@@ -51,7 +51,7 @@
 							<li><a href="#">CINE</a>
 								<div class="megamenu">
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletPeliculas?operacion=actores">Actores</a></li>
+										<li class="title"><a href="ServletActores?operacion=actores">Actores</a></li>
 										
 										
 									</ul>

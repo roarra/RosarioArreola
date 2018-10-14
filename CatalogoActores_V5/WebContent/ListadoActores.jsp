@@ -55,7 +55,7 @@
 							<li><a href="#">CINE</a>
 								<div class="megamenu">
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletPeliculas?operacion=actores">Actores</a></li>
+										<li class="title"><a href="ServletActores?operacion=actores">Actores</a></li>
 										
 										
 									</ul>
@@ -191,7 +191,7 @@
 
 
 						<div class="row">
-							<c:forEach var="mi" items="${Peliculas}">
+							<c:forEach var="mi" items="${Lista}">
 								<!-- Single Product -->
 								<div class="col-12 col-sm-6 col-lg-4">
 									<div class="single-product-wrapper">
