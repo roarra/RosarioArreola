@@ -51,7 +51,7 @@
 							<li><a href="#">CINE</a>
 								<div class="megamenu">
 									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletPeliculas?operacion=actores">Actores</a></li>
+										<li class="title"><a href="ServletActores?operacion=actores">Actores</a></li>
 										
 										
 									</ul>
@@ -59,10 +59,7 @@
 										<li class="title"><a href="ServletPeliculas?operacion=peliculas">Peliculas</a></li>
                                     	
 									</ul>
-									<ul class="single-mega cn-col-4">
-										<li class="title"><a href="ServletPeliculas?operacion=directores">Directores</a></li>
-									
-									</ul>
+								
 									<div class="single-mega cn-col-4">
 										<img src="img/camisetas/patopeque.jpg" alt="">
 									</div>

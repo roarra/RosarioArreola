@@ -205,7 +205,7 @@
 										<div class="product-description">
 											<%-- <span>${mi.categoria}</span> --%>
 											<p class="product-price">Nombre ${mi.nombre}</p>
-												<h6><a href="ServletActores?operacion=consulta&suspeliculas=${mi.nombre}" class="btn essence-btn">PELICULAS</a></h6>
+												<h6><a href="ServletActores?operacion=suspeliculas&nombre=${mi.nombre}" class="btn essence-btn">PELICULAS</a></h6>
 												<h6><a href="ServletActores?operacion=consulta&nombre=${mi.nombre}" class="btn essence-btn">FICHA TÉCNICA</a></h6>
 											<!-- Hover Content -->
 											<div class="hover-content">
