@@ -191,7 +191,7 @@
 
 
 						<div class="row">
-							<c:forEach var="mi" items="${Lista}">
+							<c:forEach var="mi" items="${Peliculas}">
 								<!-- Single Product -->
 								<div class="col-12 col-sm-6 col-lg-4">
 									<div class="single-product-wrapper">
@@ -204,8 +204,9 @@
 										<!-- Product Description -->
 										<div class="product-description">
 											<%-- <span>${mi.categoria}</span> --%>
-											<p class="product-price">Titulo ${mi.titulo}  - Fecha de Estreno ${mi.fechaEstreno} - ${mi.director}</p>
-												<h6><a href="ServletPeliculas?operacion=consulta&titulo=${mi.titulo}" class="btn essence-btn">FICHA TÉCNICA</a></h6>
+											<p class="product-price">Nombre ${mi.nombre}</p>
+												<h6><a href="ServletPeliculas?operacion=consulta&suspeliculas=${mi.nombre}" class="btn essence-btn">PELICULAS</a></h6>
+												<h6><a href="ServletPeliculas?operacion=consulta&nombre=${mi.nombre}" class="btn essence-btn">FICHA TÉCNICA</a></h6>
 											<!-- Hover Content -->
 											<div class="hover-content">
 											

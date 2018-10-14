@@ -33,7 +33,7 @@ public class ServletPeliculas extends HttpServlet {
 
 		try {
 			String operacion = request.getParameter("operacion");
-			ArrayList<Pelicula> pelis = new DAOPeliculas().listaPeliculas();
+
 
 			if (operacion.equalsIgnoreCase("peliculas")) {
 

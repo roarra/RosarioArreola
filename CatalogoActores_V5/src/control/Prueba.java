@@ -8,7 +8,7 @@ import java.util.List;
 
 import beans.Actor;
 import beans.Pelicula;
-import datos.DAO;
+
 import datos.DAOPeliculas;
 import utilidades.Utilidades;
 

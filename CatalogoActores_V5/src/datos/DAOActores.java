@@ -113,5 +113,72 @@ public class DAOActores {
 
 		}
 	}
+	
+	// Buscar actores por nombre
+
+		public ArrayList<Actor> buscarActor(String nombre) {
+
+			Statement st = null;
+			ResultSet rs = null;
+
+			ArrayList<Actor> listaActores = new ArrayList<>();
+			try {
+
+				ConexionDB conexion = new ConexionDB();
+				st = conexion.getConnection().createStatement();
+
+				rs = st.executeQuery(
+						"SELECT NOMBRE, NACIONALIDAD, CANTIDAD_PELICULAS, IMG FROM ACTORES WHERE NOMBRE= '" + nombre + "';");
+				while (rs.next()) {
+					
+					Actor actor = new Actor();
+					actor.setNombre(rs.getString("NOMBRE"));
+					actor.setNacionalidad(rs.getString("NACIONALIDAD"));
+					actor.setCantidadPeliculas(rs.getInt("CANTIDAD_PELICULAS"));
+					actor.setImg(rs.getString("IMG"));
+					
+					listaActores.add(actor);
+				}
+
+				conexion.getConnection().close();
+
+			} catch (SQLException ex) {
+
+				Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
+
+			}
+			return listaActores;
+		}
+		
+		//Mostrar las peliculas de un actor en concreto
+		
+		public ArrayList<Pelicula> listadoPelicuas(String nombre){
+			ArrayList<Pelicula> listadoPeliculas = new ArrayList<Pelicula>();
+			Statement st = null;
+			ResultSet rs = null;
+
+			try {
+				ConexionDB con = new ConexionDB();
+				st = con.getConnection().createStatement();
+				rs = st.executeQuery("SELECT TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, IMG, SINOPSIS FROM PELICULAS, REPARTO, ACTORES" + 
+						"WHERE PELICULA = TITULO AND ACTOR = NOMBRE AND NOMBRE = '" + nombre + "';");
+				while (rs.next()) {
+					Pelicula pelicula = new Pelicula();
+					pelicula.setTitulo(rs.getString("TITULO"));
+					pelicula.setDirector(rs.getString("DIRECTOR"));
+					pelicula.setVista(rs.getString("VISTA"));
+					pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO"));
+					pelicula.setImg(rs.getString("IMG"));
+					pelicula.setSinopsis(rs.getString("SINOPSIS"));
+					listadoPeliculas.add(pelicula);
+	 
+				}
+				con.getConnection().close();
+			} catch (SQLException ex) {
+				Logger.getLogger(DAOActores.class.getName()).log(Level.SEVERE, null, ex);
+			}
+			return listadoPeliculas;
+			
+		}
 
 }
