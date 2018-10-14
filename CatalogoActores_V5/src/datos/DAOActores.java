@@ -160,7 +160,8 @@ public class DAOActores {
 			try {
 				ConexionDB con = new ConexionDB();
 				st = con.getConnection().createStatement();
-				rs = st.executeQuery("SELECT TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, P.IMG, SINOPSIS FROM PELICULAS P, REPARTO, ACTORES A" + 
+				rs = st.executeQuery("SELECT TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, P.IMG, SINOPSIS \r\n" + 
+						"FROM PELICULAS P, REPARTO, ACTORES A\r\n" + 
 						"WHERE PELICULA = TITULO AND ACTOR = NOMBRE AND NOMBRE = '" + nombre + "';");
 				while (rs.next()) {
 					Pelicula pelicula = new Pelicula();
