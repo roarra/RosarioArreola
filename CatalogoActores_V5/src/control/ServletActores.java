@@ -58,8 +58,8 @@ public class ServletActores extends HttpServlet {
 				String nombre = request.getParameter("nombre");
 				
 				peliculas = new DAOActores().listadoPelicuas(nombre);
-				request.setAttribute("Peliculas", peliculas);
-				RequestDispatcher view = request.getRequestDispatcher("/ListadoActores.jsp");
+				request.setAttribute("Lista", peliculas);
+				RequestDispatcher view = request.getRequestDispatcher("/camisetas_Todas.jsp");
 				view.forward(request, response);
 						
 			}
