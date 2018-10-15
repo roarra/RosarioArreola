@@ -181,7 +181,7 @@
 									<!-- Total Products -->
 									<div class="total-products">
 										<p>
-											<span>${fn:length(Lista)}</span> peliculas encontradas
+											<span>${fn:length(Lista)}</span> actores encontrados
 										</p>
 									</div>
 								</div>
