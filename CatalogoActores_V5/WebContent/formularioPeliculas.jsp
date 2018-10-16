@@ -50,6 +50,45 @@
 		}
 	}
 
+	/* Funciones para desplegable de actores */
+	
+	function changeInsertarActorDiv() {
+		var divId = document.getElementById("desplegableInsertarActor");
+		var currentClass = divId.className;
+		if (currentClass == "noMostrar") { // si el elemento ya esta oculto
+			divId.className = "mostrar"; // muestro el elemento
+		} else {
+			divId.className = "noMostrar"; // si el elemento NO esta ocutlo, lo oculto
+		}
+	}
+	function changeModificarActorDiv() {
+		var divId = document.getElementById("desplegableModificarActor");
+		var currentClass = divId.className;
+		if (currentClass == "noMostrar") { // si el elemento ya esta oculto
+			divId.className = "mostrar"; // muestro el elemento
+		} else {
+			divId.className = "noMostrar"; // si el elemento NO esta ocutlo, lo oculto
+		}
+	}
+	function changeEliminarActorDiv() {
+		var divId = document.getElementById("desplegableEliminarActor");
+		var currentClass = divId.className;
+		if (currentClass == "noMostrar") { // si el elemento ya esta oculto
+			divId.className = "mostrar"; // muestro el elemento
+		} else {
+			divId.className = "noMostrar"; // si el elemento NO esta ocutlo, lo oculto
+		}
+	}
+	function changeConsultarActorDiv() {
+		var divId = document.getElementById("desplegableConsultarActor");
+		var currentClass = divId.className;
+		if (currentClass == "noMostrar") { // si el elemento ya esta oculto
+			divId.className = "mostrar"; // muestro el elemento
+		} else {
+			divId.className = "noMostrar"; // si el elemento NO esta ocutlo, lo oculto
+		}
+	}
+
 	$(function() {
 		$("#accordion").accordion({
 			collapsible : true
@@ -281,14 +320,126 @@
 		</div>
 	</div>
 	</div>
+	
+	</div>
+
+ <!-- Aqui empieza el administrador de actores -->
+ <div class="checkout_area section-padding-80">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-12 col-md-6">
+					<div class="checkout_details_area mt-50 clearfix">
+						<div class="order-details-confirmation">
+							<div class="cart-page-heading mb-30">
+								<h3>GESTION ACTORES</h3>
+							</div>
+
+
+							<form action="ServletFormularioActor?operacion=alta"
+								method="POST">
+								<div class="row">
+									<label><a href="#"
+										onclick="changeInsertarActorDiv();"><h6>Insertar
+												Actor</h6></a></label>
+									<div id="desplegableInsertarActor" class="noMostrar">
+
+										<div class="col-md-12 mb-3">
+											<label for="apellidos">Nombre</label> <input type="text"
+												class="form-control" value="" name="nombre">
+										</div>
+										<div class="col-12 mb-3">
+											<label for="Direccion">Nacionalidad</label> <input type="text"
+												class="form-control mb-3" value="" name="nacionalidad">
+
+										</div>
+										
+											<div >
+											<label>IMAGEN</label>
+											<input for="cardScanFile" type="file" name="img" value="${mi.img}" class="form-control">
+											<button class="btn essence-btn">Alta</button>
+										</div>
+										
+									</div>
+								</div>
+							</form>
+						<form action="ServletFormularioPelicula?operacion=consulta"
+						method="POST">
+						<div class="row">
+							<label><a href="#"
+								onclick="changeConsultarActorDiv();"><h6>Modificar
+										Actor</h6></a></label>
+							<div id="desplegableConsultarActor" class="noMostrar">
+								<div class="col-md-12 mb-3">
+									<label for="nombre">NOMBRE</label> <input type="text"
+										class="form-control" value="" name="nombre"> <br>
+									<button class="btn essence-btn">Consultar</button>
+								</div>
+							</div>
+
+						</div>
+						</form>
+
+
+					<!-- Espacio para la consulta de camisetas -->
+					<c:forEach var="mi" items="${ActorUpdate}">
+					<form action="ServletFormularioPelicula?operacion=modificar"
+						method="POST">
+						<div class="single_product_desc clearfix">
+
+							<div>
+								<p>
+									<span><b>NOMBRE ACTUAL: </b><input type="text"
+											class="form-control" value="${mi.titulo}" name="nactor"></span>
+								<p>
+									<span><b>NOMBRE: </b><input type="text"
+											class="form-control" value="${mi.titulo}" name="nombre"></span>
+								<p>
+									<span><b>NACIONALIDAD: </b> <input type="text"
+											class="form-control" value="${mi.director}" name="nacionalidad"></span>
+								
+								<p>
+									<span><b>IMAGEN: </b>
+									<input for="cardScanFile" type="file" name="img" value="${mi.img}" class="form-control"></span>
+
+								<p>
+									<span><b>SINOPSIS: </b> <input type="text"
+											class="form-control" value="${mi.sinopsis}" name="sinopsis"></span>
+								<br>
+								<button class="btn essence-btn">MODIFICAR</button>
+							</div>
+						</div>
+						</form>
+					</c:forEach>
+							
+					<form action="ServletFormularioPelicula?operacion=baja"
+						method="POST">
+						<div class="row">
+							<label><a href="#" onclick="changeEliminarActorDiv();"><h6>Eliminar
+										ACTOR</h6></a></label>
+							<div id="desplegableEliminarActor" class="noMostrar">
+								<div class="col-md-12 mb-3">
+									<label for="nombre">NOMBRE</label> <input type="text"
+										class="form-control" value="" name="nombre"> <br>
+									<button class="btn essence-btn">ELIMINAR</button>
+								</div>
+							</div>
+						</div>
+					</form>
+
+					
+
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
 	</div>
-
-
 
 
 
