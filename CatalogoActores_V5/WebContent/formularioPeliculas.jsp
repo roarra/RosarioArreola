@@ -237,7 +237,12 @@
 										<div class="col-12 mb-3">
 											<label for="numero">Sinopsis</label> <input type="text"
 												class="form-control" value="" name="sinopsis"> <br>
-											<button class="btn essence-btn">Alta</button>
+											<!-- <button class="btn essence-btn">Alta</button> -->
+										<div class="col-12 mb-3">
+											<label for="codigoPostal">Actor Asociado</label> <input type="text"
+												class="form-control" value="" name="actorA">
+												<button class="btn essence-btn">Alta</button>
+										</div>
 											<br>
 										</div>
 									</div>
@@ -363,7 +368,7 @@
 									</div>
 								</div>
 							</form>
-						<form action="ServletFormularioPelicula?operacion=consulta"
+						<form action="ServletFormularioActor?operacion=consulta"
 						method="POST">
 						<div class="row">
 							<label><a href="#"
@@ -383,28 +388,26 @@
 
 					<!-- Espacio para la consulta de camisetas -->
 					<c:forEach var="mi" items="${ActorUpdate}">
-					<form action="ServletFormularioPelicula?operacion=modificar"
+					<form action="ServletFormularioActor?operacion=modificar"
 						method="POST">
 						<div class="single_product_desc clearfix">
 
 							<div>
 								<p>
 									<span><b>NOMBRE ACTUAL: </b><input type="text"
-											class="form-control" value="${mi.titulo}" name="nactor"></span>
+											class="form-control" value="${mi.nombre}" name="nactor"></span>
 								<p>
 									<span><b>NOMBRE: </b><input type="text"
-											class="form-control" value="${mi.titulo}" name="nombre"></span>
+											class="form-control" value="${mi.nombre}" name="nombre"></span>
 								<p>
 									<span><b>NACIONALIDAD: </b> <input type="text"
-											class="form-control" value="${mi.director}" name="nacionalidad"></span>
+											class="form-control" value="${mi.nacionalidad}" name="nacionalidad"></span>
 								
 								<p>
 									<span><b>IMAGEN: </b>
 									<input for="cardScanFile" type="file" name="img" value="${mi.img}" class="form-control"></span>
 
-								<p>
-									<span><b>SINOPSIS: </b> <input type="text"
-											class="form-control" value="${mi.sinopsis}" name="sinopsis"></span>
+						
 								<br>
 								<button class="btn essence-btn">MODIFICAR</button>
 							</div>
@@ -412,7 +415,7 @@
 						</form>
 					</c:forEach>
 							
-					<form action="ServletFormularioPelicula?operacion=baja"
+					<form action="ServletFormularioActor?operacion=baja"
 						method="POST">
 						<div class="row">
 							<label><a href="#" onclick="changeEliminarActorDiv();"><h6>Eliminar

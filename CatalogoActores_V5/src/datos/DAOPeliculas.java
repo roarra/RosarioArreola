@@ -142,8 +142,8 @@ public class DAOPeliculas extends Pelicula {
 			ConexionDB conexion = new ConexionDB();
 			st = conexion.getConnection().createStatement();
 
-			String query = "UPDATE peliculas SET TITULO = '" + titulo + "', DIRECTOR = '" + director + "', VISTA = "
-					+ vista + ", FECHA_ESTRENO = " + fechaEstreno + ", IMG = '" + img + "', SINOPSIS = '" + sinopsis + "' WHERE TITULO = '"
+			String query = "UPDATE peliculas SET TITULO = '" + titulo + "', DIRECTOR = '" + director + "', VISTA = '"
+					+ vista + "', FECHA_ESTRENO = " + fechaEstreno + ", IMG = '" + img + "', SINOPSIS = '" + sinopsis + "' WHERE TITULO = '"
 					+ tbusqueda + "';";
 
 			st.executeUpdate(query);
@@ -154,6 +154,28 @@ public class DAOPeliculas extends Pelicula {
 
 			Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
 
+		}
+	}
+	
+	//Meter actor y película en la tabla Reparto
+	
+	public void insertarReparto(String pelicula, String actor) {
+		Statement st = null;
+		
+		try {
+			
+			ConexionDB conexion = new ConexionDB();
+			st = conexion.getConnection().createStatement();
+		
+		String query = "INSERT INTO REPARTO (PELICULA, ACTOR) VALUES ('" + pelicula + "', '" + actor + "');";
+		st.executeUpdate(query);
+
+		conexion.getConnection().close();
+
+		} catch (SQLException ex) {
+	
+			Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
+	
 		}
 	}
 

@@ -44,6 +44,14 @@ public class ServletGestionPeliculas extends HttpServlet {
 				//p.setFechaEstreno(DateFormat.getDateInstance().parse(request.getParameter("fecha")));
 				p.setImg("img/" + request.getParameter("img"));
 				p.setSinopsis(request.getParameter("sinopsis"));
+				String actor = request.getParameter("actorA");
+				String pelicula = request.getParameter("titulo");
+				if(actor!=null) {
+					
+					new DAOPeliculas().insertarReparto(pelicula, actor);
+					
+				}
+	
 				
 				new DAOPeliculas().insertarPeliculas(p);
 				RequestDispatcher view = request.getRequestDispatcher("/formularioPeliculas.jsp");

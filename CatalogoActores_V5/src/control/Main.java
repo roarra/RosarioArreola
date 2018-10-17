@@ -2,6 +2,8 @@ package control;
 
 import java.util.Date;
 
+import datos.DAOPeliculas;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -14,8 +16,8 @@ public class Main {
 		
 //		new Prueba().pruebasTres();
 //		
-		new Prueba().pruebasCuatro();
-//		
+		//new Prueba().pruebasCuatro();
+		new DAOPeliculas().insertarReparto("pelicula", "actor");
 
 
 
