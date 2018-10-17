@@ -13,7 +13,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title  -->
-    <title>La Casa de las Camisetas</title>
+    <title>Winter Films</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -61,7 +61,7 @@
 									</ul>
 									
 									<div class="single-mega cn-col-4">
-										<img src="img/imgindex.jpg" alt="">
+										<img src="img/index.jpg" alt="">
 									</div>
 								</div>
 						</ul>
