@@ -53,17 +53,14 @@
 									<ul class="single-mega cn-col-4">
 										<li class="title"><a href="ServletActores?operacion=actores">Actores</a></li>
 										
-										
 									</ul>
 									<ul class="single-mega cn-col-4">
 										<li class="title"><a href="ServletPeliculas?operacion=peliculas">Peliculas</a></li>
                                     	
 									</ul>
-									
-									<div class="single-mega cn-col-4">
-										<img src="img/index.jpg" alt="">
-									</div>
+						
 								</div>
+							</li>
 						</ul>
 					</div>
 					<!-- Nav End -->
@@ -75,8 +72,8 @@
 				<!-- Search Area -->
 				<div class="search-area">
 					<form action="ServletBarraBusqueda" method="POST">
-						<input type="search" name="search" id="headerSearch"
-							placeholder="Type for search">
+						<input type="search" name="busqueda" id="headerSearch"
+							placeholder="Búsqueda">
 						<button type="submit">
 							<i class="fa fa-search" aria-hidden="true"></i>
 						</button>
@@ -104,13 +101,12 @@
      
 
     <!-- ##### Welcome Area Start ##### -->
-    <section class="welcome_area bg-img background-overlay" style="background-image: url(img/imgindex.jpg);">
+    <section class="welcome_area bg-img background-overlay" style="background-image: url(img/index.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <div class="hero-content">
-                        <h2><u>PIOLICULAS</u></u></h2>
-                       <!--  <a href="ServletListado?operacion=2" class="btn essence-btn">Acceder a la Tienda</a> -->
+
                     </div>
                 </div>
             </div>

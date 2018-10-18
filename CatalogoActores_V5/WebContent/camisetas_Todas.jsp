@@ -17,7 +17,7 @@
 <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <!-- Title  -->
-<title>La Casa de las Camisetas</title>
+<title>Winter Films</title>
 
 <!-- Favicon  -->
 <link rel="icon" href="img/core-img/favicon.ico">
@@ -114,7 +114,7 @@
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
 					<div class="page-title text-center">
-						<h2>TODAS LAS PIOLICULAS</h2>
+						<h2>TODOS LOS FILMS</h2>
 					</div>
 				</div>
 			</div>
@@ -132,13 +132,14 @@
 						<!-- ##### Single Widget ##### -->
 						<div class="widget catagory mb-50">
 							<!-- Widget Title -->
-							<h6 class="widget-title mb-30">CATEGORIA</h6>
+							<h6 class="widget-title mb-30">Búsqueda</h6>
 
 							<!--  Catagories  -->
 							<div class="catagories-menu">
 								<ul id="menu-content2" class="menu-content collapse show">
 									<!-- Single Item -->
-									<li><a href="ServletListado?operacion=3&genero=HOMBRE">Hombre</a>
+									<li><a href="ServletListado?operacion=3&genero=HOMBRE">No vistas</a>
+									<li><a href="ServletListado?operacion=3&genero=HOMBRE">Por estrenar</a>
 										<ul class="sub-menu collapse show" id="clothing">
 											<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=MANGA_CORTA">Camiseta Maga Corta</a></li>
 												<ul>
