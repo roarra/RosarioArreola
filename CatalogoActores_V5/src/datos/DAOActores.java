@@ -168,7 +168,7 @@ public class DAOActores {
 					pelicula.setTitulo(rs.getString("TITULO"));
 					pelicula.setDirector(rs.getString("DIRECTOR"));
 					pelicula.setVista(rs.getString("VISTA"));
-					pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO"));
+					pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO").toLocalDate());
 					pelicula.setImg(rs.getString("IMG"));
 					pelicula.setSinopsis(rs.getString("SINOPSIS"));
 					listadoPeliculas.add(pelicula);

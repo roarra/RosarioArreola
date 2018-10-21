@@ -1,8 +1,7 @@
 package beans;
 
 
-import java.util.Date;
-
+import java.time.LocalDate;
 
 public class Pelicula {
 	
@@ -10,7 +9,7 @@ public class Pelicula {
 	private String titulo;
 	private String director;
 	private String vista;
-	private Date fechaEstreno;
+	private LocalDate fechaEstreno;
 	private String img;
 	private String sinopsis;
 	
@@ -19,13 +18,14 @@ public class Pelicula {
 		super();
 	}
 
-	public Pelicula(String titulo, String director, String vista, Date fechaEstreno, String img){
+	public Pelicula(String titulo, String director, String vista, LocalDate fechaEstreno, String img, String sinopsis){
 		super();
 		this.titulo = titulo;
 		this.director = director;
 		this.vista = vista;
 		this.fechaEstreno = fechaEstreno;
 		this.img = img;
+		this.sinopsis = sinopsis;
 
 	}
 	
@@ -74,11 +74,11 @@ public class Pelicula {
 		this.vista = vista;
 	}
 
-	public Date getFechaEstreno() {
+	public LocalDate getFechaEstreno() {
 		return fechaEstreno;
 	}
 
-	public void setFechaEstreno(Date fechaEstreno) {
+	public void setFechaEstreno(LocalDate fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
 	}
 

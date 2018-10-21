@@ -3,7 +3,7 @@ package datos;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -31,7 +31,7 @@ public class DAOPeliculas extends Pelicula {
 				pelicula.setTitulo(rs.getString("TITULO"));
 				pelicula.setDirector(rs.getString("DIRECTOR"));
 				pelicula.setVista(rs.getString("VISTA"));
-				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO"));
+				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO").toLocalDate());
 				pelicula.setImg(rs.getString("IMG"));
 				pelicula.setSinopsis(rs.getString("SINOPSIS"));
 				listaPeliculas.add(pelicula);
@@ -55,8 +55,8 @@ public class DAOPeliculas extends Pelicula {
 			st = conexion.getConnection().createStatement();
 
 			String query = "INSERT INTO peliculas(TITULO, DIRECTOR, VISTA, FECHA_ESTRENO, IMG, SINOPSIS) VALUES ('"
-					+ pelicula.getTitulo() + "','" + pelicula.getDirector() + "','" + pelicula.getVista() + "',"
-					+ /*pelicula.getFechaEstreno()*/null + ",'" + pelicula.getImg() + "','" + pelicula.getSinopsis() + "');";
+					+ pelicula.getTitulo() + "','" + pelicula.getDirector() + "','" + pelicula.getVista() + "','"
+					+ pelicula.getFechaEstreno() + "','" + pelicula.getImg() + "','" + pelicula.getSinopsis() + "');";
 
 			st.executeUpdate(query);
 
@@ -115,7 +115,7 @@ public class DAOPeliculas extends Pelicula {
 				pelicula.setTitulo(rs.getString("TITULO"));
 				pelicula.setDirector(rs.getString("DIRECTOR"));
 				pelicula.setVista(rs.getString("VISTA"));
-				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO"));
+				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO").toLocalDate());
 				pelicula.setImg(rs.getString("IMG"));
 				pelicula.setSinopsis(rs.getString("SINOPSIS"));
 				listaPeliculas.add(pelicula);
@@ -133,7 +133,7 @@ public class DAOPeliculas extends Pelicula {
 
 	// Actualizar pel�culas
 
-	public void modificarPelicula(String tbusqueda, String titulo, String director, String vista, Date fechaEstreno, String img, String sinopsis) {
+	public void modificarPelicula(String tbusqueda, String titulo, String director, String vista, LocalDate fechaEstreno, String img, String sinopsis) {
 
 		Statement st = null;
 

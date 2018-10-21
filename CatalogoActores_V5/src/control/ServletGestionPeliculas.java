@@ -2,7 +2,8 @@ package control;
 
 import java.io.IOException;
 import java.text.DateFormat;
-
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -16,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import beans.Pelicula;
 import datos.DAOPeliculas;
+import utilidades.Formater;
 
 @WebServlet("/ServletFormularioPelicula")
 public class ServletGestionPeliculas extends HttpServlet {
@@ -41,7 +43,7 @@ public class ServletGestionPeliculas extends HttpServlet {
 				p.setTitulo(request.getParameter("titulo"));
 				p.setDirector(request.getParameter("director"));
 				p.setVista((request.getParameter("vista")));
-				//p.setFechaEstreno(DateFormat.getDateInstance().parse(request.getParameter("fecha")));
+				p.setFechaEstreno((LocalDate.parse(request.getParameter("fecha"))));
 				p.setImg("img/" + request.getParameter("img"));
 				p.setSinopsis(request.getParameter("sinopsis"));
 				String actor = request.getParameter("actorA");
@@ -72,7 +74,7 @@ public class ServletGestionPeliculas extends HttpServlet {
 					String titulo = request.getParameter("titulo");
 					String director = request.getParameter("director");
 					String vista = request.getParameter("vista");
-					Date fechaEstreno = null;
+					LocalDate fechaEstreno = LocalDate.parse(request.getParameter("fecha"));
 					String img = request.getParameter("img").trim();
 					if(img.startsWith("img/")){
 						img = request.getParameter("img");

@@ -1,12 +1,16 @@
 package control;
 
-import java.util.Date;
+import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
+import beans.Pelicula;
 import datos.DAOPeliculas;
+import utilidades.Formater;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 		
 		
 		
@@ -17,7 +21,16 @@ public class Main {
 //		new Prueba().pruebasTres();
 //		
 		//new Prueba().pruebasCuatro();
-		new DAOPeliculas().insertarReparto("pelicula", "actor");
+		
+		
+		
+		LocalDate fecha = LocalDate.parse("2004-09-22");
+		
+		
+		Pelicula pelicula = new Pelicula("Pedro picapiedra", "David", "si", fecha, "rerwr", "weqeq");
+		
+		System.out.println(fecha);
+		//new DAOPeliculas().insertarPeliculas(pelicula);
 
 
 

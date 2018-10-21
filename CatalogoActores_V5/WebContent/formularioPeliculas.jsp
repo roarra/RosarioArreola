@@ -6,7 +6,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>jQuery UI Accordion - Collapse content</title>
+<title>Winter Films</title>
 <link rel="stylesheet"
 	href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
@@ -232,7 +232,7 @@
 										</div>
 																				<div >
 											<label>IMAGEN</label>
-											<input for="cardScanFile" class="form-control mb-3" type="file" name="img" value="${mi.img}" class="form-control">
+											<input for="cardScanFile" type="file" name="img" value="${mi.img}" class="form-control">
 										</div>
 										<div class="col-12 mb-3">
 											<label for="numero">Sinopsis</label> <input type="text"
