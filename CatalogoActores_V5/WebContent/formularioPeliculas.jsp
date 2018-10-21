@@ -214,7 +214,7 @@
 
 										<div class="col-md-12 mb-3">
 											<label for="apellidos">Titulo</label> <input type="text"
-												class="form-control" value="" name="titulo">
+												class="search-area" value="" name="titulo">
 										</div>
 										<div class="col-12 mb-3">
 											<label for="Direccion">Director</label> <input type="text"
