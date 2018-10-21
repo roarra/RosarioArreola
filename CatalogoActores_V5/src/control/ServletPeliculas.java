@@ -42,7 +42,22 @@ public class ServletPeliculas extends HttpServlet {
 				RequestDispatcher view = request.getRequestDispatcher("/camisetas_Todas.jsp");
 				view.forward(request, response);
 
-			} else if (operacion.equalsIgnoreCase("consulta")) {
+			} else if (operacion.equalsIgnoreCase("novistas")){
+				
+				peliculas = new DAOPeliculas().pelisNoVistas();
+				request.setAttribute("Lista", peliculas);
+				RequestDispatcher view = request.getRequestDispatcher("/camisetas_Todas.jsp");
+				view.forward(request, response);
+				
+			}else if(operacion.equalsIgnoreCase("porestrenar")) {
+				
+				peliculas = new DAOPeliculas().pelisSinEstrenar();
+				request.setAttribute("Lista", peliculas);
+				RequestDispatcher view = request.getRequestDispatcher("/camisetas_Todas.jsp");
+				view.forward(request, response);
+				
+				
+			}else if (operacion.equalsIgnoreCase("consulta")) {
 
 				String titulo = request.getParameter("titulo");
 

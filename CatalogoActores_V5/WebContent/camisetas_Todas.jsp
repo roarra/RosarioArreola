@@ -138,8 +138,8 @@
 							<div class="catagories-menu">
 								<ul id="menu-content2" class="menu-content collapse show">
 									<!-- Single Item -->
-									<li><a href="ServletListado?operacion=3&genero=HOMBRE">No vistas</a>
-									<li><a href="ServletListado?operacion=3&genero=HOMBRE">Por estrenar</a>
+									<li><a href="ServletPeliculas?operacion=novistas">No vistas</a>
+									<li><a href="ServletPeliculas?operacion=porestrenar">Por estrenar</a>
 									</li>
 								</ul>
 							</div>

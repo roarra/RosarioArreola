@@ -178,5 +178,62 @@ public class DAOPeliculas extends Pelicula {
 	
 		}
 	}
+	
+	//Metodo que muestra las peliculas no vistas
+	
+	public ArrayList <Pelicula> pelisNoVistas(){
+		
+		ArrayList<Pelicula> listaPeliculas = new ArrayList<Pelicula>();
+		Statement st = null;
+		ResultSet rs = null;
 
+		try {
+			ConexionDB con = new ConexionDB();
+			st = con.getConnection().createStatement();
+			rs = st.executeQuery("SELECT  TITULO,DIRECTOR,VISTA,FECHA_ESTRENO, IMG, SINOPSIS FROM peliculas WHERE VISTA = 'no';");
+			while (rs.next()) {
+				Pelicula pelicula = new Pelicula();
+				pelicula.setTitulo(rs.getString("TITULO"));
+				pelicula.setDirector(rs.getString("DIRECTOR"));
+				pelicula.setVista(rs.getString("VISTA"));
+				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO").toLocalDate());
+				pelicula.setImg(rs.getString("IMG"));
+				pelicula.setSinopsis(rs.getString("SINOPSIS"));
+				listaPeliculas.add(pelicula);
+			}
+			con.getConnection().close();
+		} catch (SQLException ex) {
+			Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
+		}
+		return listaPeliculas;
+	}
+	
+	//Metodo que muestra peliculas sin estrenar
+	
+	public ArrayList <Pelicula> pelisSinEstrenar(){
+	
+		ArrayList<Pelicula> listaPeliculas = new ArrayList<Pelicula>();
+		Statement st = null;
+		ResultSet rs = null;
+	
+		try {
+			ConexionDB con = new ConexionDB();
+			st = con.getConnection().createStatement();
+			rs = st.executeQuery("SELECT * FROM PELICULAS where fecha_estreno > curdate();");
+			while (rs.next()) {
+				Pelicula pelicula = new Pelicula();
+				pelicula.setTitulo(rs.getString("TITULO"));
+				pelicula.setDirector(rs.getString("DIRECTOR"));
+				pelicula.setVista(rs.getString("VISTA"));
+				pelicula.setFechaEstreno(rs.getDate("FECHA_ESTRENO").toLocalDate());
+				pelicula.setImg(rs.getString("IMG"));
+				pelicula.setSinopsis(rs.getString("SINOPSIS"));
+				listaPeliculas.add(pelicula);
+			}
+			con.getConnection().close();
+		} catch (SQLException ex) {
+			Logger.getLogger(DAOPeliculas.class.getName()).log(Level.SEVERE, null, ex);
+		}
+		return listaPeliculas;
+	}
 }
