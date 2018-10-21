@@ -232,7 +232,7 @@
 										</div>
 																				<div >
 											<label>IMAGEN</label>
-											<input for="cardScanFile" type="file" name="img" value="${mi.img}" class="form-control">
+											<input for="cardScanFile" class="form-control mb-3" type="file" name="img" value="${mi.img}" class="form-control">
 										</div>
 										<div class="col-12 mb-3">
 											<label for="numero">Sinopsis</label> <input type="text"
