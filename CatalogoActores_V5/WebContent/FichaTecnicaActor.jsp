@@ -13,7 +13,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Titlee  -->
-    <title>La Casa de las Camisetas</title>
+    <title>Winter Films</title>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/core-img/favicon.ico">

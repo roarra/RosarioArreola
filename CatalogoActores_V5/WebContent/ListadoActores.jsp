@@ -17,7 +17,7 @@
 <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 <!-- Title  -->
-<title>La Casa de las Camisetas</title>
+<title>Winter Films</title>
 
 <!-- Favicon  -->
 <link rel="icon" href="img/core-img/favicon.ico">
@@ -114,7 +114,7 @@
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
 					<div class="page-title text-center">
-						<h2>TODAS LAS PIOLICULAS</h2>
+						<h2>TODOS LOS ACTORES</h2>
 					</div>
 				</div>
 			</div>
@@ -138,33 +138,8 @@
 							<div class="catagories-menu">
 								<ul id="menu-content2" class="menu-content collapse show">
 									<!-- Single Item -->
-									<li><a href="ServletListado?operacion=3&genero=HOMBRE">Hombre</a>
-										<ul class="sub-menu collapse show" id="clothing">
-											<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=MANGA_CORTA">Camiseta Maga Corta</a></li>
-												<ul>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_CORTA&talla=S">Talla S</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_CORTA&talla=M">Talla M</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_CORTA&talla=L">Talla L</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_CORTA&talla=XL">Talla XL</a></li>
-													<br>
-												</ul>
-											<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=TIRANTES">Camiseta Tirantes</a></li>
-												<ul>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=TIRANTES&talla=S">Talla S</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=TIRANTES&talla=M">Talla M</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=TIRANTES&talla=L">Talla L</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=TIRANTES&talla=XL">Talla XL</a></li>
-													<br>
-												</ul>
-											<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=MANGA_LARGA">Camiseta Manga Larga</a></li>
-												<ul>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_LARGA&talla=S">Talla S</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_LARGA&talla=M">Talla M</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_LARGA&talla=L">Talla L</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_LARGA&talla=XL">Talla XL</a></li>
-													<br>
-												</ul>
-										</ul>
+									<li><a href="ServletListado?operacion=3&genero=HOMBRE">Filtro</a>
+										
 									</li>
 								</ul>
 							</div>
