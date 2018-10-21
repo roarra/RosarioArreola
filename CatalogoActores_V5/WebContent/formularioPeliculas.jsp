@@ -218,7 +218,7 @@
 										</div>
 										<div class="col-12 mb-3">
 											<label for="Direccion">Director</label> <input type="text"
-												class="form-control mb-3" value="" name="director">
+												class="form-control" value="" name="director">
 
 										</div>
 										<div class="col-12 mb-3">
@@ -227,7 +227,7 @@
 										</div>
 										<div class="col-12 mb-3">
 											<label for="Direccion">Fecha de Estreno</label> <input type="text"
-												class="form-control mb-3" value="" name="fecha">
+												class="form-control" value="" name="fecha">
 
 										</div>
 																				<div >

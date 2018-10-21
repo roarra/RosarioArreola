@@ -140,32 +140,6 @@
 									<!-- Single Item -->
 									<li><a href="ServletListado?operacion=3&genero=HOMBRE">No vistas</a>
 									<li><a href="ServletListado?operacion=3&genero=HOMBRE">Por estrenar</a>
-										<ul class="sub-menu collapse show" id="clothing">
-											<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=MANGA_CORTA">Camiseta Maga Corta</a></li>
-												<ul>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_CORTA&talla=S">Talla S</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_CORTA&talla=M">Talla M</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_CORTA&talla=L">Talla L</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_CORTA&talla=XL">Talla XL</a></li>
-													<br>
-												</ul>
-											<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=TIRANTES">Camiseta Tirantes</a></li>
-												<ul>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=TIRANTES&talla=S">Talla S</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=TIRANTES&talla=M">Talla M</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=TIRANTES&talla=L">Talla L</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=TIRANTES&talla=XL">Talla XL</a></li>
-													<br>
-												</ul>
-											<li><a href="ServletListado?operacion=4&genero=HOMBRE&categoria=MANGA_LARGA">Camiseta Manga Larga</a></li>
-												<ul>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_LARGA&talla=S">Talla S</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_LARGA&talla=M">Talla M</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_LARGA&talla=L">Talla L</a></li>
-													<li><a href="ServletListado?operacion=5&genero=HOMBRE&categoria=MANGA_LARGA&talla=XL">Talla XL</a></li>
-													<br>
-												</ul>
-										</ul>
 									</li>
 								</ul>
 							</div>
@@ -205,7 +179,7 @@
 										<!-- Product Description -->
 										<div class="product-description">
 											<%-- <span>${mi.categoria}</span> --%>
-											<p class="product-price">Titulo ${mi.titulo}  - Fecha de Estreno ${mi.fechaEstreno} - ${mi.director}</p>
+											<p class="product-price">${mi.titulo}</p>
 												<h6><a href="ServletPeliculas?operacion=consulta&titulo=${mi.titulo}" class="btn essence-btn">FICHA TÉCNICA</a></h6>
 											<!-- Hover Content -->
 											<div class="hover-content">
