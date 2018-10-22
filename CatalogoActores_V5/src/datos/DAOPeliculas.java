@@ -25,7 +25,7 @@ public class DAOPeliculas extends Pelicula {
 		try {
 			ConexionDB con = new ConexionDB();
 			st = con.getConnection().createStatement();
-			rs = st.executeQuery("SELECT  TITULO,DIRECTOR,VISTA,FECHA_ESTRENO, IMG, SINOPSIS FROM peliculas;");
+			rs = st.executeQuery("SELECT TITULO,DIRECTOR,VISTA,FECHA_ESTRENO, IMG, SINOPSIS FROM peliculas;");
 			while (rs.next()) {
 				Pelicula pelicula = new Pelicula();
 				pelicula.setTitulo(rs.getString("TITULO"));

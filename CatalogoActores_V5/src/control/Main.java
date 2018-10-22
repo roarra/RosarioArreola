@@ -3,10 +3,12 @@ package control;
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 import beans.Pelicula;
 import datos.DAOPeliculas;
 import utilidades.Formater;
+import utilidades.Utilidades;
 
 public class Main {
 
@@ -24,13 +26,13 @@ public class Main {
 		
 		
 		
-		LocalDate fecha = LocalDate.parse("2004-09-22");
 		
+		ArrayList<Pelicula> pelis = new DAOPeliculas().listaPeliculas();
 		
-		Pelicula pelicula = new Pelicula("Pedro picapiedra", "David", "si", fecha, "rerwr", "weqeq");
-		
-		System.out.println(fecha);
-		//new DAOPeliculas().insertarPeliculas(pelicula);
+		for(Pelicula elemento: pelis) {
+			
+			Utilidades.write(elemento.toString());
+		}
 
 
 
